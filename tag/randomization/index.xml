@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Randomization | Academic</title>
+    <link>https://sagnikm.github.io/tag/randomization/</link>
+      <atom:link href="https://sagnikm.github.io/tag/randomization/index.xml" rel="self" type="application/rss+xml" />
+    <description>Randomization</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Wed, 01 Jul 2015 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://sagnikm.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
+      <title>Randomization</title>
+      <link>https://sagnikm.github.io/tag/randomization/</link>
+    </image>
+    
+    <item>
+      <title>Towards Better Separation between Deterministic and Randomized Query Complexity</title>
+      <link>https://sagnikm.github.io/publication/fsttcs2015/</link>
+      <pubDate>Wed, 01 Jul 2015 00:00:00 +0000</pubDate>
+      <guid>https://sagnikm.github.io/publication/fsttcs2015/</guid>
+      <description>&lt;p&gt;We show that there exists a Boolean function $F$ which observes the following separations among deterministic query complexity $(D(F))$, randomized zero error query complexity $(R_0(F))$ and randomized one-sided error query complexity $(R_1(F))$: $R_1(F) = \widetilde{O}(\sqrt{D(F)})$ and $R_0(F)=\widetilde{O}(D(F))^{3/4}$. This refutes the conjecture made by Saks and Wigderson that for any Boolean function $f$, $R_0(f)=\Omega({D(f)})^{0.753..}$. This also shows widest separation between $R_1(f)$ and $D(f)$ for any Boolean function. The function $F$ was defined by Göös, Pitassi and Watson who studied it for showing a separation between deterministic decision tree complexity and unambiguous non-deterministic decision tree complexity. Independently of us, Ambainis et al proved that different variants of the function $F$ certify optimal (quadratic) separation between $D(f)$ and $R_0(f)$, and polynomial separation between $R_0(f)$ and $R_1(f)$. Viewed as separation results, our results are subsumed by those of Ambainis et al. However, while the functions considerd in the work of Ambainis et al are different variants of $F$, we work with the original function $F$ itself.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

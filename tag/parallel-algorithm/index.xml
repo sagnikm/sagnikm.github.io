@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Parallel algorithm | Academic</title>
+    <link>https://sagnikm.github.io/tag/parallel-algorithm/</link>
+      <atom:link href="https://sagnikm.github.io/tag/parallel-algorithm/index.xml" rel="self" type="application/rss+xml" />
+    <description>Parallel algorithm</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Thu, 18 Feb 2021 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://sagnikm.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
+      <title>Parallel algorithm</title>
+      <link>https://sagnikm.github.io/tag/parallel-algorithm/</link>
+    </image>
+    
+    <item>
+      <title>Work-Optimal Parallel Minimum Cuts for Non-Sparse Graphs</title>
+      <link>https://sagnikm.github.io/publication/spaa2021/</link>
+      <pubDate>Thu, 18 Feb 2021 00:00:00 +0000</pubDate>
+      <guid>https://sagnikm.github.io/publication/spaa2021/</guid>
+      <description>&lt;p&gt;We present the first work-optimal polylogarithmic-depth parallel algorithm for the minimum cut problem on non-sparse graphs. For $m\geq n^{1+\epsilon}$ for any constant $\epsilon&amp;gt;0$, our algorithm requires $O(m \log n)$ work and $O(\log^3 n)$ depth and succeeds with high probability.
+Its work matches the best $O(m \log n)$ runtime for sequential algorithms [MN STOC’20; GMW SOSA&#39;21].  This improves the previous best work by Geissmann and Gianinazzi [SPAA&#39;18] by $O(\log^3 n)$ factor, while matching the depth of their algorithm. To do this, we design a work-efficient approximation algorithm and parallelize the recent sequential algorithms [MN STOC&#39;21; GMW SOSA&#39;21] that exploit a connection between 2-respecting minimum cuts and 2-dimensional orthogonal range searching.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
