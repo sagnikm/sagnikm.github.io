@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Publications | Sagnik Mukhopadhyay</title>
+    <link>https://sagnikm.github.io/publication/</link>
+      <atom:link href="https://sagnikm.github.io/publication/index.xml" rel="self" type="application/rss+xml" />
+    <description>Publications</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 04 Jul 2022 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://sagnikm.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
+      <title>Publications</title>
+      <link>https://sagnikm.github.io/publication/</link>
+    </image>
+    
+    <item>
+      <title>Cut query algorithms with star contraction</title>
+      <link>https://sagnikm.github.io/publication/focs2022a/</link>
+      <pubDate>Mon, 04 Jul 2022 00:00:00 +0000</pubDate>
+      <guid>https://sagnikm.github.io/publication/focs2022a/</guid>
+      <description>&lt;p&gt;We study the complexity of determining the edge connectivity of a simple graph with cut queries.
+We show that (i) there is a bounded-error randomized  algorithm that computes edge connectivity with $O(n)$ cut queries, and (ii) there is a bounded-error quantum algorithm that computes edge connectivity with $\tilde O(\sqrt{n})$ cut queries. To prove these results we introduce a new technique, called &lt;em&gt;star contraction&lt;/em&gt;, to randomly contract edges of a graph while preserving non-trivial minimum cuts.  In star contraction vertices randomly contract an edge incident on a small set of randomly chosen &amp;lsquo;center&amp;rsquo; vertices.  In contrast to the related 2-out contraction technique of Ghaffari, Nowicki, and Thorup [SODA&#39;20], star contraction only contracts vertex-disjoint star subgraphs, which allows it to be efficiently implemented via cut queries.&lt;/p&gt;
+&lt;p&gt;The $O(n)$ bound from item (i) was not known even for the simpler problem of connectivity, and it improves the $O(n \log^3 n)$ upper bound by Rubinstein, Schramm, and Weinberg [ITCS&#39;18]. The bound is tight under the reasonable conjecture that the randomized communication complexity of connectivity is $\Omega(n \log n)$, an open question since the seminal work of Babai, Frankl, and Simon [FOCS&#39;86]. The bound also excludes using edge connectivity on simple graphs to prove a superlinear randomized query lower bound for minimizing a symmetric submodular function. The quantum algorithm from item~(ii) gives a nearly-quadratic separation with the randomized complexity, and addresses an open question of Lee, Santha, and Zhang [SODA&#39;21]. The algorithm can alternatively be viewed as computing the edge connectivity of a simple graph with $\tilde O(\sqrt{n})$ matrix-vector multiplication queries to its adjacency matrix.&lt;/p&gt;
+&lt;p&gt;Finally, we demonstrate the use of star contraction outside of the cut query setting by designing a one-pass semi-streaming algorithm for computing edge connectivity in the complete vertex arrival setting. This contrasts with the edge arrival setting where two passes are required.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Nearly optimal communication and query complexity of bipartite matching</title>
+      <link>https://sagnikm.github.io/publication/focs2022b/</link>
+      <pubDate>Mon, 04 Jul 2022 00:00:00 +0000</pubDate>
+      <guid>https://sagnikm.github.io/publication/focs2022b/</guid>
+      <description>&lt;p&gt;We settle the complexities of the maximum-cardinality bipartite matching problem (BMM)
+up to poly-logarithmic factors in five models of computation: the two-party communication,
+AND query, OR query, XOR query, and quantum edge query models. Our results answer open
+problems that have been raised repeatedly since at least three decades ago [Hajnal, Maass, and
+Turan STOC’88; Ivanyos, Klauck, Lee, Santha, and de Wolf FSTTCS’12; Dobzinski, Nisan,
+and Oren STOC’14; Nisan SODA’21] and tighten the lower bounds shown by Beniamini and
+Nisan [STOC’21] and Zhang [ICALP’04]. We also settle the communication complexity of the
+generalizations of BMM, such as maximum-cost bipartite b-matching and transshipment; and the
+query complexity of unique bipartite perfect matching (answering an open question by Beniamini
+[2022]). Our algorithms and lower bounds follow from simple applications of known techniques
+such as cutting planes methods and set disjointness&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Faster Connectivity in Low-Rank Hypergraphs via Expander Decomposition</title>
+      <link>https://sagnikm.github.io/publication/ipco2022/</link>
+      <pubDate>Fri, 18 Feb 2022 00:00:00 +0000</pubDate>
+      <guid>https://sagnikm.github.io/publication/ipco2022/</guid>
+      <description>&lt;p&gt;We design an algorithm for computing connectivity in hypergraphs which runs in time $\hat O_r(p + \min{\lambda n^2, n^r/\lambda})$, where $p$ is the size, $n$ is the number of vertices, $r$ is the rank (size of the largest hyperedge), and $\lambda$ is the connectivity of the hypergraph. The $\hat O_r(\cdot)$ hides terms that are subpolynomial in the main parameter and terms that depend only on $r$. Our algorithm is faster than existing algorithms when the connectivity $\lambda$ is $\Omega(n^{(r-2)/2})$.
+The heart of our algorithm is a structural result regarding min-cuts in simple hypergraphs. We show a trade-off between the number of hyperedges taking part in all min-cuts and the size of the smaller side of the min-cut. This structural result can be viewed as a generalization of a well-known structural theorem for simple graphs [Kawarabayashi-Thorup, JACM 19].  We extend the framework of expander decomposition to simple hypergraphs in order to prove this structural result. We also make the proof of the structural result constructive to obtain our faster hypergraph connectivity algorithm.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>A Note on Isolating Cut Lemma for Submodular Function Minimization</title>
+      <link>https://sagnikm.github.io/publication/isolating_lemma_preprint/</link>
+      <pubDate>Tue, 30 Mar 2021 00:00:00 +0000</pubDate>
+      <guid>https://sagnikm.github.io/publication/isolating_lemma_preprint/</guid>
+      <description>&lt;p&gt;It has been observed independently by many researchers that the isolating cut lemma of
+Li and Panigrahi [FOCS 2020] can be easily extended to obtain new algorithms for finding the
+non-trivial minimizer of a symmetric submodular function and solving the hypergraph minimum
+cut problem. This note contains these observations.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Work-Optimal Parallel Minimum Cuts for Non-Sparse Graphs</title>
+      <link>https://sagnikm.github.io/publication/spaa2021/</link>
+      <pubDate>Thu, 18 Feb 2021 00:00:00 +0000</pubDate>
+      <guid>https://sagnikm.github.io/publication/spaa2021/</guid>
+      <description>&lt;p&gt;We present the first work-optimal polylogarithmic-depth parallel algorithm for the minimum cut problem on non-sparse graphs. For $m\geq n^{1+\epsilon}$ for any constant $\epsilon&amp;gt;0$, our algorithm requires $O(m \log n)$ work and $O(\log^3 n)$ depth and succeeds with high probability.
+Its work matches the best $O(m \log n)$ runtime for sequential algorithms [MN STOC’20; GMW SOSA&#39;21].  This improves the previous best work by Geissmann and Gianinazzi [SPAA&#39;18] by $O(\log^3 n)$ factor, while matching the depth of their algorithm. To do this, we design a work-efficient approximation algorithm and parallelize the recent sequential algorithms [MN STOC&#39;21; GMW SOSA&#39;21] that exploit a connection between 2-respecting minimum cuts and 2-dimensional orthogonal range searching.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Distributed Weighted Min-Cut in Nearly-Optimal Time</title>
+      <link>https://sagnikm.github.io/publication/stoc2021a/</link>
+      <pubDate>Wed, 20 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>https://sagnikm.github.io/publication/stoc2021a/</guid>
+      <description>&lt;p&gt;Minimum-weight cut (min-cut) is a basic measure of a network&amp;rsquo;s connectivity strength. While the min-cut can be computed efficiently in the sequential setting [Karger STOC&#39;96], there was no efficient way for a distributed network to compute its own min-cut without limiting the input structure or dropping the output quality: In the standard CONGEST model, existing algorithms with nearly-optimal time (e.g. [Ghaffari, Kuhn, DISC&#39;13; Nanongkai, Su, DISC&#39;14]) can guarantee a solution that is $(1+\epsilon)$-approximation at best while the exact $\tilde O(n^{0.8} D^{0.2} + n^{0.9})$-time algorithm [Ghaffari, Nowicki, Thorup, SODA&#39;20] works only on &lt;em&gt;simple&lt;/em&gt; networks (no weights and no parallel edges). Throughout, $n$ and $D$ denote the network&amp;rsquo;s number of vertices and hop-diameter, respectively. For the weighted case, the best bound was $\tilde O(n)$ [Daga, Henzinger, Nanongkai, Saranurak, STOC&#39;19].&lt;/p&gt;
+&lt;p&gt;In this paper, we provide an {\em exact} $\tilde O(\sqrt n + D)$-time algorithm for computing min-cut on &lt;em&gt;weighted&lt;/em&gt; networks. Our result improves even the previous algorithm that works only on simple networks. Its time complexity matches the known lower bound up to polylogarithmic factors.
+At the heart of our algorithm are a clever routing trick and two structural lemmas regarding the structure of a minimum cut of a graph. These two structural lemmas considerably strengthen and generalize the framework of Mukhopadhyay-Nanongkai [STOC&#39;20] and can be of independent interest.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Breaking the Quadratic Barrier for Matroid Intersection</title>
+      <link>https://sagnikm.github.io/publication/stoc2021b/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>https://sagnikm.github.io/publication/stoc2021b/</guid>
+      <description>&lt;p&gt;The matroid intersection problem is a fundamental problem that has been extensively studied for half a century. In the classic version of this problem, we are given two matroids ${\cal M}_1 = (V, {\cal I}_1)$ and ${\cal M}_2 = (V, {\cal I}_2)$ on a comment ground set $V$ of $n$ elements, and then we have to find the largest common independent set $S \in {\cal I}_1 \cap {\cal I}_2$ by making  &lt;em&gt;independence oracle queries&lt;/em&gt;  of the form &amp;lsquo;&amp;lsquo;Is $S \in {\cal I}_1$?&amp;rsquo;&amp;rsquo; or &amp;lsquo;&amp;lsquo;Is $S \in {\cal I}_2$?&amp;rsquo;&amp;rsquo; for $S \subseteq V$. The goal is to minimize the number of queries.&lt;/p&gt;
+&lt;p&gt;Beating the existing $\tilde O(n^2)$ bound, known as the &lt;em&gt;quadratic barrier&lt;/em&gt;, is an open problem that captures the limits of techniques from two lines of work. The first one is the classic Cunningham&amp;rsquo;s algorithm [SICOMP 1986], whose $\tilde O(n^2)$-query implementations were shown by CLS+ [FOCS 2019] and Nguyen [2019]. More generally, these algorithms take $\tilde O(nr)$ queries where $r$ denotes the rank which can be as big as $n$.  The other one is the general cutting plane method of Lee, Sidford, and Wong [FOCS 2015]. The only progress towards breaking the quadratic barrier requires either {\em approximation} algorithms or a more powerful &lt;em&gt;rank oracle query&lt;/em&gt; [CLS+ FOCS 2019]. No exact algorithm with $o(n^2)$ independence queries was known.&lt;/p&gt;
+&lt;p&gt;In this work, we break the quadratic barrier with a randomized algorithm guaranteeing $\tilde O(n^{9/5})$ independence queries with high probability, and a deterministic algorithm guaranteeing $\tilde O(n^{11/6})$ independence queries. Our key insight is simple and fast algorithms to solve a graph reachability problem that arose in the standard augmenting path framework [Edmonds 1968]. Combining this with previous exact and approximation algorithms leads to our results.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Weighted Min-Cut: Sequential, Cut-Query and Streaming Algorithms</title>
+      <link>https://sagnikm.github.io/publication/stoc2020/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>https://sagnikm.github.io/publication/stoc2020/</guid>
+      <description>&lt;p&gt;Consider the following &lt;em&gt;2-respecting min-cut&lt;/em&gt; problem. Given a weighted graph $G$ and its spanning tree $T$, find the minimum cut among the cuts that contain at most two edges in $T$. This problem is an important subroutine in Karger&amp;rsquo;s celebrated randomized near-linear-time min-cut algorithm [STOC&#39;96]. We present a new approach for this problem which can be easily implemented in many settings, leading to the following randomized min-cut algorithms for weighted graphs.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;An $O\left(m\frac{\log^2 n}{\log\log n} + n\log^6 n\right)$-time sequential algorithm: This improves Karger&amp;rsquo;s long-standing $O(m \log^3 n)$ and $O\left(m\frac{(\log^2 n)\log (n^2/m)}{\log\log n} + n\log^6 n\right)$ bounds when the input graph is not extremely sparse or dense. Improvements over Karger&amp;rsquo;s bounds were previously known only under a rather strong assumption that the input graph is {\em simple} (unweighted without parallel edges) [Henzinger, Rao, Wang, SODA&#39;17; Ghaffari, Nowicki, Thorup, SODA&#39;20]. For unweighted graphs  (possibly with parallel edges) and using bit operations, our bound can be further improved to $O\left(m\frac{\log^{1.5} n}{\log\log n} + n\log^6 n\right)$.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;An algorithm that requires $\tilde O(n)$ &lt;em&gt;cut queries&lt;/em&gt; to compute the min-cut of a weighted graph: This answers an open problem by Rubinstein, Schramm, and Weinberg [ITCS&#39;18], who obtained a similar bound for simple graphs. Our bound is tight up to polylogarithmic factors.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;A &lt;em&gt;streaming&lt;/em&gt; algorithm that requires $\tilde O(n)$ space and $O(\log n)$ passes to compute the min-cut: The only previous non-trivial exact min-cut algorithm in this setting is the 2-pass $\tilde O(n)$-space algorithm on simple graphs [Rubenstein et al. ITCS 2018] observed by Assadi, Chen, and Khanna [STOC&#39;19]).&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In contrast to Karger&amp;rsquo;s 2-respecting min-cut algorithm which deploys sophisticated dynamic programming techniques, our approach exploits some cute structural properties so that it only needs to compute the values of $\tilde O(n)$ cuts corresponding to removing $\tilde O(n)$ pairs of tree edges, an operation that can be done quickly in many settings.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Simulation Theorems via Pseudo-random Properties</title>
+      <link>https://sagnikm.github.io/publication/cc2019/</link>
+      <pubDate>Sun, 01 Sep 2019 00:00:00 +0000</pubDate>
+      <guid>https://sagnikm.github.io/publication/cc2019/</guid>
+      <description>&lt;p&gt;We generalize the deterministic simulation theorem of Raz-Mckenzie, to any gadget which satisfies a certain hitting property. We prove that Inner-product and gap-Hamming satisfy this property, and, as a corollary, we obtain deterministic simulation theorem for these gadgets, where the gadget&amp;rsquo;s input-size is logarithmic in the input-size of the outer function. This yields the first deterministic simulation theorem with a logarithmic gadget size, answering an open question posed by Goos-Pitassi-Watson.&lt;/p&gt;
+&lt;p&gt;Our result also implies the previous results for the Indexing gadget, with better parameters than was previously known. Moreover, a simulation theorem with logarithmic-sized gadget implies a quadratic separation in deterministic communication complexity and logarithm of the $1$-partition number, no matter how high the $1$-partition number is with respect to the input size&amp;mdash;something which is not achievable by previous results of Goos-Pitassi-Watson.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Lifting Theorems for Equality</title>
+      <link>https://sagnikm.github.io/publication/stacs2019/</link>
+      <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
+      <guid>https://sagnikm.github.io/publication/stacs2019/</guid>
+      <description>&lt;p&gt;We show a &lt;em&gt;deterministic simulation (or lifting) theorem&lt;/em&gt; for composed problems $f \circ \mathsf{Eq}_n$ where the inner function (the gadget) is Equality on $n$ bits. When $f$ is a total function on $p$ bits, it is easy to show via a rank argument that the communication complexity of $f\circ \mathsf{Eq}_n$ is $\Omega(deg(f) \cdot n)$. However, there is a surprising counter-example of a partial function $f$ on $p$ bits, such that any completion $f&#39;$ of $f$ has $\deg(f&#39;) = \Omega(p)$, and yet $f \circ \mathsf{Eq}_n$ has communication complexity $O(n)$. Nonetheless, we are able to show that the communication complexity of $f \circ \mathsf{Eq}_n$ is at least $D(f) \cdot n$ for a complexity measure $D(f)$ which is closely related to the AND-query complexity of $f$ and is lower-bounded by the logarithm of the leaf complexity of $f$. As a corollary, we also obtain lifting theorems for the set-disjointness gadget, and a lifting theorem in the context of parity decision-trees, for the NOR gadget.&lt;/p&gt;
+&lt;p&gt;As an application, we prove a tight lower-bound for the deterministic communication complexity of the communication problem, where Alice and Bob are each given $p$-many $n$-bit strings, with the promise that either all of the strings are distinct, or all-but-one of the strings are distinct, and they wish to know which is the case. We show that the complexity of this problem is $\Theta(p \cdot n)$.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Simulation Beats Richness: New Data-Structure Lower Bounds</title>
+      <link>https://sagnikm.github.io/publication/stoc2018/</link>
+      <pubDate>Sun, 01 Jul 2018 00:00:00 +0000</pubDate>
+      <guid>https://sagnikm.github.io/publication/stoc2018/</guid>
+      <description>&lt;p&gt;We develop a technique for proving lower bounds in the setting of asymmetric communication, a model that was introduced in the famous works of Miltersen (STOC&#39;94) and Miltersen, Nisan, Safra and Wigderson (STOC&#39;95). At the core of our technique is a novel simulation theorem. Alice gets a $p \times n$ matrix $x$ over $\mathbb F_2$ and Bob gets a vector $y \in \mathbb F_2^n$.  Alice and Bob need to evaluate $f(x\cdot y)$ for a Boolean function $f$. Our simulation theorems show that a deterministic/randomized communication protocol exists for this problem, with cost $C\cdot n$ for Alice and $C$ for Bob, if and only if there exists a deterministic/randomized \emph{parity decision tree} of cost $\Theta(C)$ for evaluating $f$. As applications of this technique, we obtain the following results:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;The first strong lower-bounds against randomized data-structure schemes for the Vector-Matrix-Vector product problem over $\mathbb F_2$. Moreover, our method yields strong lower bounds even when the data-structure scheme has tiny advantage over random guessing.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The first lower bounds against randomized data-structures schemes for two natural Boolean variants of Orthogonal Vector Counting.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;We construct an asymmetric communication problem and obtain a deterministic lower-bound for it which is provably better than any lower-bound that may be obtained by the classical Richness Method of Miltersen et al. This seems to be the first known limitation of the Richness Method in the context of proving deterministic lower bounds.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Lower Bounds for Elimination via Weak Regularity</title>
+      <link>https://sagnikm.github.io/publication/stacs-2017/</link>
+      <pubDate>Sat, 01 Jul 2017 00:00:00 +0000</pubDate>
+      <guid>https://sagnikm.github.io/publication/stacs-2017/</guid>
+      <description>&lt;p&gt;We consider the problem of elimination in communication complexity, that was first raised by Ambainis et al. and later studied by Beimel et al. for its connection to the famous direct sum question. In this problem, let $f : {0, 1}^{2n} \to {0, 1}$ be any boolean function. Alice and Bob get $k$ inputs $x_1, \cdots , x_k$ and $y_1, \cdots, y_k$ respectively, with $x_i, y_i \in {0, 1}^n$. They want to output a $k$-bit vector $v$, such that there exists one index $i$ for which $v_i \neq f(x_i, y_i)$. We prove a general result lower bounding the randomized communication complexity of the elimination problem for $f$ using its discrepancy. Consequently, we obtain strong lower bounds for the functions &lt;em&gt;InnerProduct&lt;/em&gt; and  &lt;em&gt;Greater-Than&lt;/em&gt;, that work for exponentially larger values of $k$ than the best previous bounds. To prove our result, we use a pseudo-random notion called regularity that was first used by Raz and Wigderson. We show that functions with small discrepancy are regular. We also observe that a weaker notion, that we call weak-regularity, already implies hardness of elimination. Finally, we give a different proof, borrowing ideas from Viola, to show that Greater-Than is weakly regular.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Separation between Deterministic and Randomized Query Complexity</title>
+      <link>https://sagnikm.github.io/publication/siam2018/</link>
+      <pubDate>Tue, 01 Sep 2015 00:00:00 +0000</pubDate>
+      <guid>https://sagnikm.github.io/publication/siam2018/</guid>
+      <description>&lt;p&gt;Saks and Wigderson [FOCS 1986] conjectured that $R_0(f)=\Omega(D(f)^{0.753\ldots})$ for all Boolean functions $f$. We show that for the pointer function $GPW_{r \times s}$ defined by Goos, Pitassi, and Watson [FOCS 2015], the following hold:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;$R_1(GPW_{r \times s})=\tilde\Theta(r + s)$ and&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$R_1(\overline{GPW_{r \times s}})=\tilde \Theta(r + \sqrt{r}s)$,&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;where $R_1$ denotes the randomized one-sided error query complexity. These results imply that (i) $R_0(GPW_{s^2 \times s})=O(D(GPW_{s^2 \times s})^{2/3})$, thereby refuting the conjecture of Saks and Wigderson, and (ii)
+$R_1(GPW_{s \times s})=\tilde O(R_0(GPW_{s \times s})^{2/3})$, thereby
+providing a polynomial separation between the randomized zero-error and one
+sided error query complexity measures.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Towards Better Separation between Deterministic and Randomized Query Complexity</title>
+      <link>https://sagnikm.github.io/publication/fsttcs2015/</link>
+      <pubDate>Wed, 01 Jul 2015 00:00:00 +0000</pubDate>
+      <guid>https://sagnikm.github.io/publication/fsttcs2015/</guid>
+      <description>&lt;p&gt;We show that there exists a Boolean function $F$ which observes the following separations among deterministic query complexity $(D(F))$, randomized zero error query complexity $(R_0(F))$ and randomized one-sided error query complexity $(R_1(F))$: $R_1(F) = \widetilde{O}(\sqrt{D(F)})$ and $R_0(F)=\widetilde{O}(D(F))^{3/4}$. This refutes the conjecture made by Saks and Wigderson that for any Boolean function $f$, $R_0(f)=\Omega({D(f)})^{0.753..}$. This also shows widest separation between $R_1(f)$ and $D(f)$ for any Boolean function. The function $F$ was defined by Göös, Pitassi and Watson who studied it for showing a separation between deterministic decision tree complexity and unambiguous non-deterministic decision tree complexity. Independently of us, Ambainis et al proved that different variants of the function $F$ certify optimal (quadratic) separation between $D(f)$ and $R_0(f)$, and polynomial separation between $R_0(f)$ and $R_1(f)$. Viewed as separation results, our results are subsumed by those of Ambainis et al. However, while the functions considerd in the work of Ambainis et al are different variants of $F$, we work with the original function $F$ itself.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Tribes is Hard in Message-passing Model</title>
+      <link>https://sagnikm.github.io/publication/stacs2015/</link>
+      <pubDate>Wed, 01 Jul 2015 00:00:00 +0000</pubDate>
+      <guid>https://sagnikm.github.io/publication/stacs2015/</guid>
+      <description>&lt;p&gt;We consider the point-to-point message passing model of
+communication in which there are $k$ processors with individual
+private inputs, each $n$-bit long. Each processor is located at the
+node of an underlying undirected graph and has access to private
+random coins. An edge of the graph is a private channel of
+communication between its endpoints. The processors have to compute
+a given function of all their inputs by communicating along these
+channels. While this model has been widely used in distributed
+computing, strong lower bounds on the amount of communication needed
+to compute simple functions have just begun to appear.&lt;/p&gt;
+&lt;p&gt;In this work, we prove a tight lower bound of $\Omega(kn)$ on the
+communication needed for computing the Tribes function, when the
+underlying graph is a star of $k+1$ nodes that has $k$ leaves with
+inputs and a center with no input. Lower bound on this topology
+easily implies comparable bounds for others.  Our lower bounds are
+obtained by building upon the recent information theoretic
+techniques of Braverman et.al [FOCS&#39;13] and combining it
+with the earlier work of Jayram, Kumar and Sivakumar [STOC&#39;03]. This approach yields
+information complexity bounds that is of independent interest.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Elimination | Sagnik Mukhopadhyay</title>
+    <link>https://sagnikm.github.io/tag/elimination/</link>
+      <atom:link href="https://sagnikm.github.io/tag/elimination/index.xml" rel="self" type="application/rss+xml" />
+    <description>Elimination</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sat, 01 Jul 2017 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://sagnikm.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
+      <title>Elimination</title>
+      <link>https://sagnikm.github.io/tag/elimination/</link>
+    </image>
+    
+    <item>
+      <title>Lower Bounds for Elimination via Weak Regularity</title>
+      <link>https://sagnikm.github.io/publication/stacs-2017/</link>
+      <pubDate>Sat, 01 Jul 2017 00:00:00 +0000</pubDate>
+      <guid>https://sagnikm.github.io/publication/stacs-2017/</guid>
+      <description>&lt;p&gt;We consider the problem of elimination in communication complexity, that was first raised by Ambainis et al. and later studied by Beimel et al. for its connection to the famous direct sum question. In this problem, let $f : {0, 1}^{2n} \to {0, 1}$ be any boolean function. Alice and Bob get $k$ inputs $x_1, \cdots , x_k$ and $y_1, \cdots, y_k$ respectively, with $x_i, y_i \in {0, 1}^n$. They want to output a $k$-bit vector $v$, such that there exists one index $i$ for which $v_i \neq f(x_i, y_i)$. We prove a general result lower bounding the randomized communication complexity of the elimination problem for $f$ using its discrepancy. Consequently, we obtain strong lower bounds for the functions &lt;em&gt;InnerProduct&lt;/em&gt; and  &lt;em&gt;Greater-Than&lt;/em&gt;, that work for exponentially larger values of $k$ than the best previous bounds. To prove our result, we use a pseudo-random notion called regularity that was first used by Raz and Wigderson. We show that functions with small discrepancy are regular. We also observe that a weaker notion, that we call weak-regularity, already implies hardness of elimination. Finally, we give a different proof, borrowing ideas from Viola, to show that Greater-Than is weakly regular.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Tribes is Hard in Message-passing Model</title>
+      <link>https://sagnikm.github.io/publication/stacs2015/</link>
+      <pubDate>Wed, 01 Jul 2015 00:00:00 +0000</pubDate>
+      <guid>https://sagnikm.github.io/publication/stacs2015/</guid>
+      <description>&lt;p&gt;We consider the point-to-point message passing model of
+communication in which there are $k$ processors with individual
+private inputs, each $n$-bit long. Each processor is located at the
+node of an underlying undirected graph and has access to private
+random coins. An edge of the graph is a private channel of
+communication between its endpoints. The processors have to compute
+a given function of all their inputs by communicating along these
+channels. While this model has been widely used in distributed
+computing, strong lower bounds on the amount of communication needed
+to compute simple functions have just begun to appear.&lt;/p&gt;
+&lt;p&gt;In this work, we prove a tight lower bound of $\Omega(kn)$ on the
+communication needed for computing the Tribes function, when the
+underlying graph is a star of $k+1$ nodes that has $k$ leaves with
+inputs and a center with no input. Lower bound on this topology
+easily implies comparable bounds for others.  Our lower bounds are
+obtained by building upon the recent information theoretic
+techniques of Braverman et.al [FOCS&#39;13] and combining it
+with the earlier work of Jayram, Kumar and Sivakumar [STOC&#39;03]. This approach yields
+information complexity bounds that is of independent interest.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

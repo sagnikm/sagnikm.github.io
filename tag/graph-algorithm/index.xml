@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Graph algorithm | Sagnik Mukhopadhyay</title>
+    <link>https://sagnikm.github.io/tag/graph-algorithm/</link>
+      <atom:link href="https://sagnikm.github.io/tag/graph-algorithm/index.xml" rel="self" type="application/rss+xml" />
+    <description>Graph algorithm</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 04 Jul 2022 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://sagnikm.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
+      <title>Graph algorithm</title>
+      <link>https://sagnikm.github.io/tag/graph-algorithm/</link>
+    </image>
+    
+    <item>
+      <title>Cut query algorithms with star contraction</title>
+      <link>https://sagnikm.github.io/publication/focs2022a/</link>
+      <pubDate>Mon, 04 Jul 2022 00:00:00 +0000</pubDate>
+      <guid>https://sagnikm.github.io/publication/focs2022a/</guid>
+      <description>&lt;p&gt;We study the complexity of determining the edge connectivity of a simple graph with cut queries.
+We show that (i) there is a bounded-error randomized  algorithm that computes edge connectivity with $O(n)$ cut queries, and (ii) there is a bounded-error quantum algorithm that computes edge connectivity with $\tilde O(\sqrt{n})$ cut queries. To prove these results we introduce a new technique, called &lt;em&gt;star contraction&lt;/em&gt;, to randomly contract edges of a graph while preserving non-trivial minimum cuts.  In star contraction vertices randomly contract an edge incident on a small set of randomly chosen &amp;lsquo;center&amp;rsquo; vertices.  In contrast to the related 2-out contraction technique of Ghaffari, Nowicki, and Thorup [SODA&#39;20], star contraction only contracts vertex-disjoint star subgraphs, which allows it to be efficiently implemented via cut queries.&lt;/p&gt;
+&lt;p&gt;The $O(n)$ bound from item (i) was not known even for the simpler problem of connectivity, and it improves the $O(n \log^3 n)$ upper bound by Rubinstein, Schramm, and Weinberg [ITCS&#39;18]. The bound is tight under the reasonable conjecture that the randomized communication complexity of connectivity is $\Omega(n \log n)$, an open question since the seminal work of Babai, Frankl, and Simon [FOCS&#39;86]. The bound also excludes using edge connectivity on simple graphs to prove a superlinear randomized query lower bound for minimizing a symmetric submodular function. The quantum algorithm from item~(ii) gives a nearly-quadratic separation with the randomized complexity, and addresses an open question of Lee, Santha, and Zhang [SODA&#39;21]. The algorithm can alternatively be viewed as computing the edge connectivity of a simple graph with $\tilde O(\sqrt{n})$ matrix-vector multiplication queries to its adjacency matrix.&lt;/p&gt;
+&lt;p&gt;Finally, we demonstrate the use of star contraction outside of the cut query setting by designing a one-pass semi-streaming algorithm for computing edge connectivity in the complete vertex arrival setting. This contrasts with the edge arrival setting where two passes are required.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Nearly optimal communication and query complexity of bipartite matching</title>
+      <link>https://sagnikm.github.io/publication/focs2022b/</link>
+      <pubDate>Mon, 04 Jul 2022 00:00:00 +0000</pubDate>
+      <guid>https://sagnikm.github.io/publication/focs2022b/</guid>
+      <description>&lt;p&gt;We settle the complexities of the maximum-cardinality bipartite matching problem (BMM)
+up to poly-logarithmic factors in five models of computation: the two-party communication,
+AND query, OR query, XOR query, and quantum edge query models. Our results answer open
+problems that have been raised repeatedly since at least three decades ago [Hajnal, Maass, and
+Turan STOC’88; Ivanyos, Klauck, Lee, Santha, and de Wolf FSTTCS’12; Dobzinski, Nisan,
+and Oren STOC’14; Nisan SODA’21] and tighten the lower bounds shown by Beniamini and
+Nisan [STOC’21] and Zhang [ICALP’04]. We also settle the communication complexity of the
+generalizations of BMM, such as maximum-cost bipartite b-matching and transshipment; and the
+query complexity of unique bipartite perfect matching (answering an open question by Beniamini
+[2022]). Our algorithms and lower bounds follow from simple applications of known techniques
+such as cutting planes methods and set disjointness&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>A Note on Isolating Cut Lemma for Submodular Function Minimization</title>
+      <link>https://sagnikm.github.io/publication/isolating_lemma_preprint/</link>
+      <pubDate>Tue, 30 Mar 2021 00:00:00 +0000</pubDate>
+      <guid>https://sagnikm.github.io/publication/isolating_lemma_preprint/</guid>
+      <description>&lt;p&gt;It has been observed independently by many researchers that the isolating cut lemma of
+Li and Panigrahi [FOCS 2020] can be easily extended to obtain new algorithms for finding the
+non-trivial minimizer of a symmetric submodular function and solving the hypergraph minimum
+cut problem. This note contains these observations.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Work-Optimal Parallel Minimum Cuts for Non-Sparse Graphs</title>
+      <link>https://sagnikm.github.io/publication/spaa2021/</link>
+      <pubDate>Thu, 18 Feb 2021 00:00:00 +0000</pubDate>
+      <guid>https://sagnikm.github.io/publication/spaa2021/</guid>
+      <description>&lt;p&gt;We present the first work-optimal polylogarithmic-depth parallel algorithm for the minimum cut problem on non-sparse graphs. For $m\geq n^{1+\epsilon}$ for any constant $\epsilon&amp;gt;0$, our algorithm requires $O(m \log n)$ work and $O(\log^3 n)$ depth and succeeds with high probability.
+Its work matches the best $O(m \log n)$ runtime for sequential algorithms [MN STOC’20; GMW SOSA&#39;21].  This improves the previous best work by Geissmann and Gianinazzi [SPAA&#39;18] by $O(\log^3 n)$ factor, while matching the depth of their algorithm. To do this, we design a work-efficient approximation algorithm and parallelize the recent sequential algorithms [MN STOC&#39;21; GMW SOSA&#39;21] that exploit a connection between 2-respecting minimum cuts and 2-dimensional orthogonal range searching.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Distributed Weighted Min-Cut in Nearly-Optimal Time</title>
+      <link>https://sagnikm.github.io/publication/stoc2021a/</link>
+      <pubDate>Wed, 20 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>https://sagnikm.github.io/publication/stoc2021a/</guid>
+      <description>&lt;p&gt;Minimum-weight cut (min-cut) is a basic measure of a network&amp;rsquo;s connectivity strength. While the min-cut can be computed efficiently in the sequential setting [Karger STOC&#39;96], there was no efficient way for a distributed network to compute its own min-cut without limiting the input structure or dropping the output quality: In the standard CONGEST model, existing algorithms with nearly-optimal time (e.g. [Ghaffari, Kuhn, DISC&#39;13; Nanongkai, Su, DISC&#39;14]) can guarantee a solution that is $(1+\epsilon)$-approximation at best while the exact $\tilde O(n^{0.8} D^{0.2} + n^{0.9})$-time algorithm [Ghaffari, Nowicki, Thorup, SODA&#39;20] works only on &lt;em&gt;simple&lt;/em&gt; networks (no weights and no parallel edges). Throughout, $n$ and $D$ denote the network&amp;rsquo;s number of vertices and hop-diameter, respectively. For the weighted case, the best bound was $\tilde O(n)$ [Daga, Henzinger, Nanongkai, Saranurak, STOC&#39;19].&lt;/p&gt;
+&lt;p&gt;In this paper, we provide an {\em exact} $\tilde O(\sqrt n + D)$-time algorithm for computing min-cut on &lt;em&gt;weighted&lt;/em&gt; networks. Our result improves even the previous algorithm that works only on simple networks. Its time complexity matches the known lower bound up to polylogarithmic factors.
+At the heart of our algorithm are a clever routing trick and two structural lemmas regarding the structure of a minimum cut of a graph. These two structural lemmas considerably strengthen and generalize the framework of Mukhopadhyay-Nanongkai [STOC&#39;20] and can be of independent interest.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Weighted Min-Cut: Sequential, Cut-Query and Streaming Algorithms</title>
+      <link>https://sagnikm.github.io/publication/stoc2020/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>https://sagnikm.github.io/publication/stoc2020/</guid>
+      <description>&lt;p&gt;Consider the following &lt;em&gt;2-respecting min-cut&lt;/em&gt; problem. Given a weighted graph $G$ and its spanning tree $T$, find the minimum cut among the cuts that contain at most two edges in $T$. This problem is an important subroutine in Karger&amp;rsquo;s celebrated randomized near-linear-time min-cut algorithm [STOC&#39;96]. We present a new approach for this problem which can be easily implemented in many settings, leading to the following randomized min-cut algorithms for weighted graphs.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;An $O\left(m\frac{\log^2 n}{\log\log n} + n\log^6 n\right)$-time sequential algorithm: This improves Karger&amp;rsquo;s long-standing $O(m \log^3 n)$ and $O\left(m\frac{(\log^2 n)\log (n^2/m)}{\log\log n} + n\log^6 n\right)$ bounds when the input graph is not extremely sparse or dense. Improvements over Karger&amp;rsquo;s bounds were previously known only under a rather strong assumption that the input graph is {\em simple} (unweighted without parallel edges) [Henzinger, Rao, Wang, SODA&#39;17; Ghaffari, Nowicki, Thorup, SODA&#39;20]. For unweighted graphs  (possibly with parallel edges) and using bit operations, our bound can be further improved to $O\left(m\frac{\log^{1.5} n}{\log\log n} + n\log^6 n\right)$.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;An algorithm that requires $\tilde O(n)$ &lt;em&gt;cut queries&lt;/em&gt; to compute the min-cut of a weighted graph: This answers an open problem by Rubinstein, Schramm, and Weinberg [ITCS&#39;18], who obtained a similar bound for simple graphs. Our bound is tight up to polylogarithmic factors.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;A &lt;em&gt;streaming&lt;/em&gt; algorithm that requires $\tilde O(n)$ space and $O(\log n)$ passes to compute the min-cut: The only previous non-trivial exact min-cut algorithm in this setting is the 2-pass $\tilde O(n)$-space algorithm on simple graphs [Rubenstein et al. ITCS 2018] observed by Assadi, Chen, and Khanna [STOC&#39;19]).&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In contrast to Karger&amp;rsquo;s 2-respecting min-cut algorithm which deploys sophisticated dynamic programming techniques, our approach exploits some cute structural properties so that it only needs to compute the values of $\tilde O(n)$ cuts corresponding to removing $\tilde O(n)$ pairs of tree edges, an operation that can be done quickly in many settings.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
