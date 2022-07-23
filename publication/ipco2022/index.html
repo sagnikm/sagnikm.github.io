@@ -60,10 +60,10 @@
   
     
   
-  <meta name="description" content="Lecturer in Algorithms" />
+  <meta name="description" content="We design an algorithm for computing connectivity in hypergraphs which runs in time $\hat O_r(p &#43; \min{\lambda n^2, n^r/\lambda})$, where $p$ is the size, $n$ is the number of vertices, $r$ is the rank (size of the largest hyperedge), and $\lambda$ is the connectivity of the hypergraph." />
 
   
-  <link rel="alternate" hreflang="en-us" href="https://sagnikm.github.io/tag/min-cut/" />
+  <link rel="alternate" hreflang="en-us" href="https://sagnikm.github.io/publication/ipco2022/" />
 
   
   
@@ -271,8 +271,6 @@
   
 
   
-    <link rel="alternate" href="/tag/min-cut/index.xml" type="application/rss+xml" title="Sagnik Mukhopadhyay" />
-  
 
   
     <link rel="manifest" href="/manifest.webmanifest" />
@@ -281,7 +279,7 @@
   <link rel="icon" type="image/png" href="/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_3.png" />
   <link rel="apple-touch-icon" type="image/png" href="/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_180x180_fill_lanczos_center_3.png" />
 
-  <link rel="canonical" href="https://sagnikm.github.io/tag/min-cut/" />
+  <link rel="canonical" href="https://sagnikm.github.io/publication/ipco2022/" />
 
   
   
@@ -307,33 +305,80 @@
     <meta property="twitter:creator" content="@schwagznikst" />
   
   <meta property="og:site_name" content="Sagnik Mukhopadhyay" />
-  <meta property="og:url" content="https://sagnikm.github.io/tag/min-cut/" />
-  <meta property="og:title" content="Min-cut | Sagnik Mukhopadhyay" />
-  <meta property="og:description" content="Lecturer in Algorithms" /><meta property="og:image" content="https://sagnikm.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png" />
+  <meta property="og:url" content="https://sagnikm.github.io/publication/ipco2022/" />
+  <meta property="og:title" content="Faster Connectivity in Low-Rank Hypergraphs via Expander Decomposition | Sagnik Mukhopadhyay" />
+  <meta property="og:description" content="We design an algorithm for computing connectivity in hypergraphs which runs in time $\hat O_r(p &#43; \min{\lambda n^2, n^r/\lambda})$, where $p$ is the size, $n$ is the number of vertices, $r$ is the rank (size of the largest hyperedge), and $\lambda$ is the connectivity of the hypergraph." /><meta property="og:image" content="https://sagnikm.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png" />
     <meta property="twitter:image" content="https://sagnikm.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
   
     
-      <meta property="og:updated_time" content="2022-02-18T00:00:00&#43;00:00" />
+      <meta
+        property="article:published_time"
+        content="2020-04-20T00:00:00&#43;00:00"
+      />
     
+    <meta property="article:modified_time" content="2022-02-18T00:00:00&#43;00:00">
+  
+
+  
+
+
+    
+
+
+
+
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://sagnikm.github.io/publication/ipco2022/"
+  },
+  "headline": "Faster Connectivity in Low-Rank Hypergraphs via Expander Decomposition",
+  
+  "datePublished": "2020-04-20T00:00:00Z",
+  "dateModified": "2022-02-18T00:00:00Z",
+  
+  "author": {
+    "@type": "Person",
+    "name": "Calvin Beideman"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Sagnik Mukhopadhyay",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://sagnikm.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_3.png"
+    }
+  },
+  "description": "We design an algorithm for computing connectivity in hypergraphs which runs in time $\\hat O_r(p + \\min{\\lambda n^2, n^r/\\lambda})$, where $p$ is the size, $n$ is the number of vertices, $r$ is the rank (size of the largest hyperedge), and $\\lambda$ is the connectivity of the hypergraph."
+}
+</script>
+
+  
+
+  
+
   
 
   
 
 
 
-  
-
-  
 
 
-
-
-
-  <title>Min-cut | Sagnik Mukhopadhyay</title>
+  <title>Faster Connectivity in Low-Rank Hypergraphs via Expander Decomposition | Sagnik Mukhopadhyay</title>
 </head>
 
 
-<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   "  >
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="5dfccad1e13c62c3a7f45e7647d0515a" >
 
   
   
@@ -531,7 +576,7 @@
           
 
           <li class="nav-item">
-            <a class="nav-link " href="/publication/"><span>Publications</span></a>
+            <a class="nav-link  active" href="/publication/"><span>Publications</span></a>
           </li>
 
           
@@ -638,6 +683,17 @@
 
 
 
+<div class="pub">
+
+  
+
+
+
+
+
+
+
+
 
 
 
@@ -646,93 +702,67 @@
 
   
   
+  
+<div class="article-container pt-3">
+  <h1>Faster Connectivity in Low-Rank Hypergraphs via Expander Decomposition</h1>
+
+  
+
   
     
-  
-<div class="universal-wrapper pt-3">
-  <h1>Min-cut</h1>
-
-  
-
-  
-</div>
 
 
-
-<div class="universal-wrapper">
-  
+<div class="article-metadata">
 
   
   
+  
+  
+  <div>
     
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-  
-
-
-<div class="media stream-item view-compact">
-  <div class="media-body">
-
-    <div class="section-subheading article-title mb-0 mt-0">
-      <a href="/publication/ipco2022/" >Faster Connectivity in Low-Rank Hypergraphs via Expander Decomposition</a>
-    </div>
-
-    
-    <a href="/publication/ipco2022/"  class="summary-link">
-      <div class="article-style">
-        We design an algorithm for computing connectivity in hypergraphs which runs in time $\hat O_r(p + \min{\lambda n^2, n^r/\lambda})$, where $p$ is the size, $n$ is the number of vertices, $r$ is the rank (size of the largest hyperedge), and $\lambda$ is the connectivity of the hypergraph.
-      </div>
-    </a>
-    
-
-    <div class="stream-meta article-metadata">
-
-      
-
-      
-      <div>
-        
 
   <span >
       Calvin Beideman</span>, <span >
       Karthekeyan Chandrasekaran</span>, <span class="author-highlighted">
       Sagnik Mukhopadhyay</span>, <span >
       Danupon Nanongkai</span>
-      </div>
+  </div>
+  
+  
+
+  
+  <span class="article-date">
+    
+    
       
-    </div>
+    
+    February 2022
+  </span>
+  
 
-    
+  
 
-  </div>
-  <div class="ml-3">
-    
-    
-  </div>
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+  
+
 </div>
 
-  
     
 
 
 
 
-
-
-
+<div class="btn-links mb-3">
+  
   
 
 
@@ -741,173 +771,375 @@
 
 
 
+
+  
+    
   
 
 
-<div class="media stream-item view-compact">
-  <div class="media-body">
 
-    <div class="section-subheading article-title mb-0 mt-0">
-      <a href="/publication/spaa2021/" >Work-Optimal Parallel Minimum Cuts for Non-Sparse Graphs</a>
-    </div>
+<a class="btn btn-outline-primary btn-page-header" href="https://arxiv.org/pdf/2011.08097.pdf" target="_blank" rel="noopener">
+  PDF
+</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+    
+  
+  
+  
+  
+  
+    
+  
+  <a class="btn btn-outline-primary btn-page-header" href="https://arxiv.org/abs/2011.08097" target="_blank" rel="noopener">
+    arXiv</a>
+
+
+</div>
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
 
     
-    <a href="/publication/spaa2021/"  class="summary-link">
-      <div class="article-style">
-        We present the first work-optimal polylogarithmic-depth parallel algorithm for the minimum cut problem on non-sparse graphs. For $m\geq n^{1+\epsilon}$ for any constant $\epsilon&gt;0$, our algorithm requires $O(m \log n)$ work and $O(\log^3 n)$ depth and succeeds with high probability.
+
+    
+    
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-10">
+        <div class="row">
+          <div class="col-12 col-md-3 pub-row-heading">Type</div>
+          <div class="col-12 col-md-9">
+            <a href="/publication/#1">
+              Conference paper
+            </a>
+          </div>
+        </div>
       </div>
-    </a>
+      <div class="col-md-1"></div>
+    </div>
+    <div class="d-md-none space-below"></div>
     
 
-    <div class="stream-meta article-metadata">
+    
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-10">
+        <div class="row">
+          <div class="col-12 col-md-3 pub-row-heading">Publication</div>
+          <div class="col-12 col-md-9">In <em>IPCO 2022</em></div>
+        </div>
+      </div>
+      <div class="col-md-1"></div>
+    </div>
+    <div class="d-md-none space-below"></div>
+    
 
-      
+    <div class="space-below"></div>
 
+    <div class="article-style"><p>We design an algorithm for computing connectivity in hypergraphs which runs in time $\hat O_r(p + \min{\lambda n^2, n^r/\lambda})$, where $p$ is the size, $n$ is the number of vertices, $r$ is the rank (size of the largest hyperedge), and $\lambda$ is the connectivity of the hypergraph. The $\hat O_r(\cdot)$ hides terms that are subpolynomial in the main parameter and terms that depend only on $r$. Our algorithm is faster than existing algorithms when the connectivity $\lambda$ is $\Omega(n^{(r-2)/2})$.
+The heart of our algorithm is a structural result regarding min-cuts in simple hypergraphs. We show a trade-off between the number of hyperedges taking part in all min-cuts and the size of the smaller side of the min-cut. This structural result can be viewed as a generalization of a well-known structural theorem for simple graphs [Kawarabayashi-Thorup, JACM 19].  We extend the framework of expander decomposition to simple hypergraphs in order to prove this structural result. We also make the proof of the structural result constructive to obtain our faster hypergraph connectivity algorithm.</p>
+</div>
+
+    
+
+
+
+
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tag/hypergraph-algorithm/">Hypergraph algorithm</a>
+  
+  <a class="badge badge-light" href="/tag/min-cut/">Min-cut</a>
+  
+</div>
+
+
+
+<div class="share-box">
+  <ul class="share">
+    
       
-      <div>
+      
+      
         
-
-  <span >
-      Andrés López-Martínez</span>, <span class="author-highlighted">
-      Sagnik Mukhopadhyay</span>, <span >
-      Danupon Nanongkai</span>
-      </div>
       
-    </div>
-
-    
-
-  </div>
-  <div class="ml-3">
-    
-    
-  </div>
-</div>
-
-  
-    
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-  
-
-
-<div class="media stream-item view-compact">
-  <div class="media-body">
-
-    <div class="section-subheading article-title mb-0 mt-0">
-      <a href="/publication/stoc2021a/" >Distributed Weighted Min-Cut in Nearly-Optimal Time</a>
-    </div>
-
-    
-    <a href="/publication/stoc2021a/"  class="summary-link">
-      <div class="article-style">
-        Minimum-weight cut (min-cut) is a basic measure of a network&rsquo;s connectivity strength. While the min-cut can be computed efficiently in the sequential setting [Karger STOC'96], there was no efficient way for a distributed network to compute its own min-cut without limiting the input structure or dropping the output quality: In the standard CONGEST model, existing algorithms with nearly-optimal time (e.
-      </div>
-    </a>
-    
-
-    <div class="stream-meta article-metadata">
-
       
-
       
-      <div>
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=https://sagnikm.github.io/publication/ipco2022/&amp;text=Faster%20Connectivity%20in%20Low-Rank%20Hypergraphs%20via%20Expander%20Decomposition" target="_blank" rel="noopener" class="share-btn-twitter" aria-label="twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
         
-
-  <span >
-      Michal Dory</span>, <span >
-      Yuval Efron</span>, <span class="author-highlighted">
-      Sagnik Mukhopadhyay</span>, <span >
-      Danupon Nanongkai</span>
-      </div>
       
-    </div>
-
-    
-
-  </div>
-  <div class="ml-3">
-    
-    
-  </div>
-</div>
-
-  
-    
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-  
-
-
-<div class="media stream-item view-compact">
-  <div class="media-body">
-
-    <div class="section-subheading article-title mb-0 mt-0">
-      <a href="/publication/stoc2020/" >Weighted Min-Cut: Sequential, Cut-Query and Streaming Algorithms</a>
-    </div>
-
-    
-    <a href="/publication/stoc2020/"  class="summary-link">
-      <div class="article-style">
-        Consider the following 2-respecting min-cut problem. Given a weighted graph $G$ and its spanning tree $T$, find the minimum cut among the cuts that contain at most two edges in $T$.
-      </div>
-    </a>
-    
-
-    <div class="stream-meta article-metadata">
-
       
-
       
-      <div>
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=https://sagnikm.github.io/publication/ipco2022/&amp;t=Faster%20Connectivity%20in%20Low-Rank%20Hypergraphs%20via%20Expander%20Decomposition" target="_blank" rel="noopener" class="share-btn-facebook" aria-label="facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+    
+      
+      
+      
         
-
-  <span class="author-highlighted">
-      Sagnik Mukhopadhyay</span>, <span >
-      Danupon Nanongkai</span>
-      </div>
       
-    </div>
-
+      
+      
+      <li>
+        <a href="mailto:?subject=Faster%20Connectivity%20in%20Low-Rank%20Hypergraphs%20via%20Expander%20Decomposition&amp;body=https://sagnikm.github.io/publication/ipco2022/" target="_blank" rel="noopener" class="share-btn-email" aria-label="envelope">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
     
-
-  </div>
-  <div class="ml-3">
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=https://sagnikm.github.io/publication/ipco2022/&amp;title=Faster%20Connectivity%20in%20Low-Rank%20Hypergraphs%20via%20Expander%20Decomposition" target="_blank" rel="noopener" class="share-btn-linkedin" aria-label="linkedin-in">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
     
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="whatsapp://send?text=Faster%20Connectivity%20in%20Low-Rank%20Hypergraphs%20via%20Expander%20Decomposition%20https://sagnikm.github.io/publication/ipco2022/" target="_blank" rel="noopener" class="share-btn-whatsapp" aria-label="whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
     
-  </div>
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=https://sagnikm.github.io/publication/ipco2022/&amp;title=Faster%20Connectivity%20in%20Low-Rank%20Hypergraphs%20via%20Expander%20Decomposition" target="_blank" rel="noopener" class="share-btn-weibo" aria-label="weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
 </div>
 
+
+
+
+
+
+
+
+
+
+
   
+  
+    
+
+
+
+
+  
+    
+
+
+
+
+  
+    
+
+
+
+  
+  
+  
+    
+  
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+      
+      <a href="https://sagnikm.github.io/"><img class="avatar mr-3 avatar-circle" src="/authors/admin/avatar_huc2ba43a1057c1c4d208dce2d3992586e_2175753_270x270_fill_q75_lanczos_center.jpg" alt="Sagnik Mukhopadhyay"></a>
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="https://sagnikm.github.io/">Sagnik Mukhopadhyay</a></h5>
+      <h6 class="card-subtitle">Lecturer in Algorithms</h6>
+      <p class="card-text">My research interests include complexity theory and distributed graph algorithms.</p>
+      <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="/#contact" >
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://twitter.com/schwagznikst" target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://scholar.google.se/citations?user=9JQnLLoAAAAJ&amp;hl=en" target="_blank" rel="noopener">
+        <i class="fas fa-graduation-cap"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://dblp.org/pers/hd/m/Mukhopadhyay:Sagnik" target="_blank" rel="noopener">
+        <i class="ai ai-dblp"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="/uploads/files/cv.pdf" >
+        <i class="ai ai-cv"></i>
+      </a>
+    </li>
+  
+</ul>
+
+    </div>
+  </div>
+
+
+  
+    
+
+
+
 
   
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <div class="article-widget content-widget-hr">
+    <h3>Related</h3>
+    <ul>
+      
+      <li><a href="/publication/stoc2021a/">Distributed Weighted Min-Cut in Nearly-Optimal Time</a></li>
+      
+      <li><a href="/publication/spaa2021/">Work-Optimal Parallel Minimum Cuts for Non-Sparse Graphs</a></li>
+      
+      <li><a href="/publication/stoc2020/">Weighted Min-Cut: Sequential, Cut-Query and Streaming Algorithms</a></li>
+      
+    </ul>
+  </div>
+  
+
+
+
+
+
+  </div>
 </div>
   </div>
 
