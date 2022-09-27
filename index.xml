@@ -153,6 +153,120 @@
     </item>
     
     <item>
+      <title>Towards Understanding Challenges of Computation over Large Network</title>
+      <link>https://sagnikm.github.io/project/graphcom/</link>
+      <pubDate>Tue, 27 Sep 2022 00:00:00 +0000</pubDate>
+      <guid>https://sagnikm.github.io/project/graphcom/</guid>
+      <description>&lt;h1 id=&#34;hiring&#34;&gt;Hiring!&lt;/h1&gt;
+&lt;p&gt;I am looking for a motivated and mathematically inclined PhD student
+with previous experience in courses/modules in theoretical computer science.
+This position is based in the Department of Computer Science in the University
+of Sheffield and comes with full tuition fee and stipend. Travel support is also
+available. The potential candidate will be expected to support algorithms teaching
+in the department (which will be paid additionally).&lt;/p&gt;
+&lt;p&gt;A strong interest in graph algorithms, complexity theory, distributed and
+streaming algorithms and/or combinatorial optimization will be a
+plus. Starting date is negotiable. Please see below for a brief motivation and
+papers of interest.&lt;/p&gt;
+&lt;h1 id=&#34;motivation&#34;&gt;Motivation&lt;/h1&gt;
+&lt;p&gt;&lt;em&gt;After a long-drawn war, two nations, Oceania and Eurasia,
+are now at peace but in not much of talking terms. However,
+they will have to figure out how much shipment their
+combined rail network can carry from the capital city of
+Oceania to that of Eurasia. Both Oceania and Eurasia know
+about their own rail networks in detail, but none of them
+knows anything about other nation&amp;rsquo;s network plans. Because
+of the political situation, they want to keep communication
+between them to a minimum. You are the chief researcher of
+Eurasia, in contact with Winston Smith, the chief researcher
+of Oceania. How much communication do you need to do to
+figure it out?&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;The aim of this project is to investigate such fundamental
+network problems where the network data is distributed
+between multiple processors. Such problems appear in
+countless guises in modern life: The transportation problem
+mentioned before is inspired by actual logistic
+difficulties that kept the US and Russia busy during the
+first half of the 20th century (see
+&lt;a href=&#34;https://tinyurl.com/2p844c2y&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://tinyurl.com/2p844c2y&lt;/a&gt; for a fun read). In the modern
+realm of data explosion, these network questions are more
+topical than ever: The network data (think of the friendship
+network of Facebook or the follower network of Twitter or
+the hyperlink network of Google) is usually too large to be
+stored in a single computational processor and hence is
+generally distributed among a large number of
+processors/servers who need to communicate with each other
+via a network in order to perform various computational tasks.
+This problem is generally addressed via different storage
+architectures for fast access and efficient software
+paradigms such as MapReduce, Hadoop, and Spark.&lt;/p&gt;
+&lt;p&gt;Many traditional algorithms that were widely used in the
+past have become greatly inefficient in practice for such
+distributed systems. The main goal of the proposed research
+is to design (or prove the hardness of) fundamental network
+algorithms and their generalisations in such distributed
+models of computation. To be concrete, we will mainly be
+interested in the following two models in this project.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Two-party communication protocols: The graph data is distributed to two machines, namely Alice and Bob. Machines can access their local data for free, but it costs for them to communicate.&lt;/li&gt;
+&lt;li&gt;Query protocols: The graph data is stored in external memory (e.g., among many external servers or cloud) and the local machine is allowed to access the data only by query accesses which can be answered quickly.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The project will lead to major advances in our understanding of &amp;ldquo;distributed
+network algorithms&amp;rdquo;, which is an important research area within theoretical
+computer science that is concerned with addressing precisely the question
+described above.&lt;/p&gt;
+&lt;h1 id=&#34;a-few-papers-of-interest&#34;&gt;A few papers of interest&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Li Chen, Rasmus Kyng, Yang P. Liu, Richard Peng, Maximilian Probst Gutenberg, Sushant Sachdeva
+Maximum Flow and Minimum-Cost Flow in Almost-Linear Time
+PDF: &lt;a href=&#34;https://arxiv.org/abs/2203.00671&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://arxiv.org/abs/2203.00671&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Haotian Jiang:
+Minimizing Convex Functions with Integral Minimizers. SODA 2021: 976-985
+PDF: &lt;a href=&#34;https://arxiv.org/abs/2007.01445&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://arxiv.org/abs/2007.01445&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Nicholas J. A. Harvey:
+Matroid intersection, pointer chasing, and Young&amp;rsquo;s seminormal representation of Sn. SODA 2008: 542-549
+PDF:  &lt;a href=&#34;https://dl-acm-org.focus.lib.kth.se/citation.cfm?id=1347142&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://dl-acm-org.focus.lib.kth.se/citation.cfm?id=1347142&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Andrei Graur, Tristan Pollner, Vidhya Ramaswamy, S. Matthew Weinberg:
+New Query Lower Bounds for Submodular Function Minimization. ITCS 2020: 64:1-64:16
+PDF: &lt;a href=&#34;https://arxiv.org/abs/1911.06889&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://arxiv.org/abs/1911.06889&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Yu Chen, Sanjeev Khanna, Ansh Nagda:
+Near-linear Size Hypergraph Cut Sparsifiers. FOCS 2020: 61-72
+PDF: &lt;a href=&#34;https://arxiv.org/abs/2009.04992&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://arxiv.org/abs/2009.04992&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Chandra Chekuri, Chao Xu:
+Minimum Cuts and Sparsification in Hypergraphs. SIAM J. Comput. 47(6): 2118-2156 (2018)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Sagnik Mukhopadhyay, Danupon Nanongkai:
+Weighted Min-Cut: Sequential, Cut-Query and Streaming Algorithms. CoRR abs/1911.01651 (2019)
+PDF: &lt;a href=&#34;https://arxiv.org/abs/1911.01651&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://arxiv.org/abs/1911.01651&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;S. Apers and T. Lee
+Quantum complexity of minimum cut.
+PDF: &lt;a href=&#34;https://arxiv.org/abs/2011.09823&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://arxiv.org/abs/2011.09823&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Noam Nisan, Avi Wigderson: Rounds in Communication Complexity Revisited. SIAM J. Comput. 22(1): 211-219 (1993)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Noam Nisan: The Demand Query Model for Bipartite Matching: SODA 2021: 592-599&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Cut Query Algorithms with Star Contraction</title>
       <link>https://sagnikm.github.io/publication/focs2022a/</link>
       <pubDate>Mon, 04 Jul 2022 00:00:00 +0000</pubDate>
@@ -510,19 +624,6 @@ $$&lt;/p&gt;
       <pubDate>Sat, 01 Jul 2017 00:00:00 +0000</pubDate>
       <guid>https://sagnikm.github.io/publication/stacs-2017/</guid>
       <description>&lt;p&gt;We consider the problem of elimination in communication complexity, that was first raised by Ambainis et al. and later studied by Beimel et al. for its connection to the famous direct sum question. In this problem, let $f : {0, 1}^{2n} \to {0, 1}$ be any boolean function. Alice and Bob get $k$ inputs $x_1, \cdots , x_k$ and $y_1, \cdots, y_k$ respectively, with $x_i, y_i \in {0, 1}^n$. They want to output a $k$-bit vector $v$, such that there exists one index $i$ for which $v_i \neq f(x_i, y_i)$. We prove a general result lower bounding the randomized communication complexity of the elimination problem for $f$ using its discrepancy. Consequently, we obtain strong lower bounds for the functions &lt;em&gt;InnerProduct&lt;/em&gt; and  &lt;em&gt;Greater-Than&lt;/em&gt;, that work for exponentially larger values of $k$ than the best previous bounds. To prove our result, we use a pseudo-random notion called regularity that was first used by Raz and Wigderson. We show that functions with small discrepancy are regular. We also observe that a weaker notion, that we call weak-regularity, already implies hardness of elimination. Finally, we give a different proof, borrowing ideas from Viola, to show that Greater-Than is weakly regular.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Example Project</title>
-      <link>https://sagnikm.github.io/project/example/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
-      <guid>https://sagnikm.github.io/project/example/</guid>
-      <description>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.&lt;/p&gt;
-&lt;p&gt;Nullam vel molestie justo. Curabitur vitae efficitur leo. In hac habitasse platea dictumst. Sed pulvinar mauris dui, eget varius purus congue ac. Nulla euismod, lorem vel elementum dapibus, nunc justo porta mi, sed tempus est est vel tellus. Nam et enim eleifend, laoreet sem sit amet, elementum sem. Morbi ut leo congue, maximus velit ut, finibus arcu. In et libero cursus, rutrum risus non, molestie leo. Nullam congue quam et volutpat malesuada. Sed risus tortor, pulvinar et dictum nec, sodales non mi. Phasellus lacinia commodo laoreet. Nam mollis, erat in feugiat consectetur, purus eros egestas tellus, in auctor urna odio at nibh. Mauris imperdiet nisi ac magna convallis, at rhoncus ligula cursus.&lt;/p&gt;
-&lt;p&gt;Cras aliquam rhoncus ipsum, in hendrerit nunc mattis vitae. Duis vitae efficitur metus, ac tempus leo. Cras nec fringilla lacus. Quisque sit amet risus at ipsum pharetra commodo. Sed aliquam mauris at consequat eleifend. Praesent porta, augue sed viverra bibendum, neque ante euismod ante, in vehicula justo lorem ac eros. Suspendisse augue libero, venenatis eget tincidunt ut, malesuada at lorem. Donec vitae bibendum arcu. Aenean maximus nulla non pretium iaculis. Quisque imperdiet, nulla in pulvinar aliquet, velit quam ultrices quam, sit amet fringilla leo sem vel nunc. Mauris in lacinia lacus.&lt;/p&gt;
-&lt;p&gt;Suspendisse a tincidunt lacus. Curabitur at urna sagittis, dictum ante sit amet, euismod magna. Sed rutrum massa id tortor commodo, vitae elementum turpis tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean purus turpis, venenatis a ullamcorper nec, tincidunt et massa. Integer posuere quam rutrum arcu vehicula imperdiet. Mauris ullamcorper quam vitae purus congue, quis euismod magna eleifend. Vestibulum semper vel augue eget tincidunt. Fusce eget justo sodales, dapibus odio eu, ultrices lorem. Duis condimentum lorem id eros commodo, in facilisis mauris scelerisque. Morbi sed auctor leo. Nullam volutpat a lacus quis pharetra. Nulla congue rutrum magna a ornare.&lt;/p&gt;
-&lt;p&gt;Aliquam in turpis accumsan, malesuada nibh ut, hendrerit justo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque sed erat nec justo posuere suscipit. Donec ut efficitur arcu, in malesuada neque. Nunc dignissim nisl massa, id vulputate nunc pretium nec. Quisque eget urna in risus suscipit ultricies. Pellentesque odio odio, tincidunt in eleifend sed, posuere a diam. Nam gravida nisl convallis semper elementum. Morbi vitae felis faucibus, vulputate orci placerat, aliquet nisi. Aliquam erat volutpat. Maecenas sagittis pulvinar purus, sed porta quam laoreet at.&lt;/p&gt;
 </description>
     </item>
     
