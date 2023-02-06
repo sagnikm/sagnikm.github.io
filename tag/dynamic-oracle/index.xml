@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Dynamic oracle | Sagnik Mukhopadhyay</title>
+    <link>https://sagnikm.github.io/tag/dynamic-oracle/</link>
+      <atom:link href="https://sagnikm.github.io/tag/dynamic-oracle/index.xml" rel="self" type="application/rss+xml" />
+    <description>Dynamic oracle</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sun, 01 Jan 2023 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://sagnikm.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
+      <title>Dynamic oracle</title>
+      <link>https://sagnikm.github.io/tag/dynamic-oracle/</link>
+    </image>
+    
+    <item>
+      <title>Fast Algorithms via Dynamic-Oracle Matroids</title>
+      <link>https://sagnikm.github.io/publication/stoc2023b/</link>
+      <pubDate>Sun, 01 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>https://sagnikm.github.io/publication/stoc2023b/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

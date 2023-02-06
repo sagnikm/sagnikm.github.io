@@ -5,12 +5,30 @@
     <link>https://sagnikm.github.io/publication/</link>
       <atom:link href="https://sagnikm.github.io/publication/index.xml" rel="self" type="application/rss+xml" />
     <description>Publications</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 04 Jul 2022 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Fri, 20 Jan 2023 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://sagnikm.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
       <title>Publications</title>
       <link>https://sagnikm.github.io/publication/</link>
     </image>
+    
+    <item>
+      <title>Finding a Small Vertex Cut on Distributed Networks</title>
+      <link>https://sagnikm.github.io/publication/stoc2023a/</link>
+      <pubDate>Fri, 20 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>https://sagnikm.github.io/publication/stoc2023a/</guid>
+      <description>&lt;p&gt;We present an algorithm for distributed networks to efficiently find a small vertex cut in the CONGEST model. Given a positive integer $\kappa$, our algorithm can, with high probability, either find $\kappa$ vertices whose removal disconnects the network or return that such $\kappa$ vertices do not exist. Our algorithm takes $\kappa^3\cdot \tilde{O}(D+\sqrt{n})$ rounds, where $n$ is the number of vertices in the network and $D$ denotes the network&amp;rsquo;s diameter. This implies $\tilde{O}(D+\sqrt{n})$ round complexity whenever $\kappa=\polylog(n)$.&lt;/p&gt;
+&lt;p&gt;Prior to our result, a similar bound of $\tilde{O}(D+\sqrt{n})$  is known only when $\kappa=1$ [Thurimella PODC&#39;95]. For $\kappa\geq 2$, this bound can be obtained only by an $O(\log n)$-approximation algorithm [Censor-Hillel, Ghaffari, Kuhn PODC&#39;14], and the only known exact algorithm takes  $O\left((\conn\Delta D)^{O(\conn)}\right)$ rounds, where $\Delta$ is the maximum degree [Parter DISC&#39;19]. Our result answers an open problem by Nanongkai, Saranurak, and Yingchareonthawornchai [STOC&#39;19].&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Fast Algorithms via Dynamic-Oracle Matroids</title>
+      <link>https://sagnikm.github.io/publication/stoc2023b/</link>
+      <pubDate>Sun, 01 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>https://sagnikm.github.io/publication/stoc2023b/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Cut Query Algorithms with Star Contraction</title>

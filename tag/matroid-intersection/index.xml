@@ -5,12 +5,20 @@
     <link>https://sagnikm.github.io/tag/matroid-intersection/</link>
       <atom:link href="https://sagnikm.github.io/tag/matroid-intersection/index.xml" rel="self" type="application/rss+xml" />
     <description>Matroid intersection</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Fri, 01 Jan 2021 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sun, 01 Jan 2023 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://sagnikm.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
       <title>Matroid intersection</title>
       <link>https://sagnikm.github.io/tag/matroid-intersection/</link>
     </image>
+    
+    <item>
+      <title>Fast Algorithms via Dynamic-Oracle Matroids</title>
+      <link>https://sagnikm.github.io/publication/stoc2023b/</link>
+      <pubDate>Sun, 01 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>https://sagnikm.github.io/publication/stoc2023b/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Breaking the Quadratic Barrier for Matroid Intersection</title>
