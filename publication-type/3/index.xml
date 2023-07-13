@@ -5,12 +5,36 @@
     <link>https://sagnikm.github.io/publication-type/3/</link>
       <atom:link href="https://sagnikm.github.io/publication-type/3/index.xml" rel="self" type="application/rss+xml" />
     <description>3</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Tue, 30 Mar 2021 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sat, 01 Jul 2023 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://sagnikm.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
       <title>3</title>
       <link>https://sagnikm.github.io/publication-type/3/</link>
     </image>
+    
+    <item>
+      <title>Breaking Quadratic Barriers for Vertex Connectivity: Communication, Streaming, and Quantum Edge-Query Algorithms</title>
+      <link>https://sagnikm.github.io/publication/vccommstreamquantum/</link>
+      <pubDate>Sat, 01 Jul 2023 00:00:00 +0000</pubDate>
+      <guid>https://sagnikm.github.io/publication/vccommstreamquantum/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Polynomial Pass Semi-Streaming Lower Bounds for K-Cores and Degeneracy</title>
+      <link>https://sagnikm.github.io/publication/degeneracystreaming/</link>
+      <pubDate>Sat, 01 Jul 2023 00:00:00 +0000</pubDate>
+      <guid>https://sagnikm.github.io/publication/degeneracystreaming/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Shortcuts and Transitive-Closure Spanners Approximation</title>
+      <link>https://sagnikm.github.io/publication/shortcuttcspanner/</link>
+      <pubDate>Sat, 01 Jul 2023 00:00:00 +0000</pubDate>
+      <guid>https://sagnikm.github.io/publication/shortcuttcspanner/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>A Note on Isolating Cut Lemma for Submodular Function Minimization</title>

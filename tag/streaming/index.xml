@@ -5,12 +5,28 @@
     <link>https://sagnikm.github.io/tag/streaming/</link>
       <atom:link href="https://sagnikm.github.io/tag/streaming/index.xml" rel="self" type="application/rss+xml" />
     <description>Streaming</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Wed, 01 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sat, 01 Jul 2023 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://sagnikm.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
       <title>Streaming</title>
       <link>https://sagnikm.github.io/tag/streaming/</link>
     </image>
+    
+    <item>
+      <title>Breaking Quadratic Barriers for Vertex Connectivity: Communication, Streaming, and Quantum Edge-Query Algorithms</title>
+      <link>https://sagnikm.github.io/publication/vccommstreamquantum/</link>
+      <pubDate>Sat, 01 Jul 2023 00:00:00 +0000</pubDate>
+      <guid>https://sagnikm.github.io/publication/vccommstreamquantum/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Polynomial Pass Semi-Streaming Lower Bounds for K-Cores and Degeneracy</title>
+      <link>https://sagnikm.github.io/publication/degeneracystreaming/</link>
+      <pubDate>Sat, 01 Jul 2023 00:00:00 +0000</pubDate>
+      <guid>https://sagnikm.github.io/publication/degeneracystreaming/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Weighted Min-Cut: Sequential, Cut-Query and Streaming Algorithms</title>
