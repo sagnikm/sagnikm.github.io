@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STOC 2026 Workshop: Algorithmic Frontiers via Global Queries</title>
+    <style>
+        /* Minimalist Academic Theme */
+        :root {
+            --text-main: #222222;
+            --text-muted: #555555;
+            --accent-blue: #0A437A;
+            --bg-color: #FAFAFA;
+            --border-color: #E0E0E0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Layout & Container */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Header / Hero Section */
+        header {
+            border-bottom: 2px solid var(--accent-blue);
+            padding-bottom: 2rem;
+            margin-bottom: 3rem;
+            margin-top: 3rem;
+        }
+
+        .venue-tag {
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--accent-blue);
+            letter-spacing: 1px;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            line-height: 1.2;
+            margin: 0 0 1rem 0;
+            color: var(--text-main);
+        }
+
+        .meta-info {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        /* Typography for sections */
+        h2 {
+            font-size: 1.8rem;
+            color: var(--text-main);
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+        }
+
+        ul {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+            font-size: 1.05rem;
+        }
+
+        /* Speaker Layout */
+        .speaker-day {
+            margin-bottom: 2rem;
+        }
+
+        .speaker-day h3 {
+            font-size: 1.2rem;
+            color: var(--accent-blue);
+            margin-bottom: 0.5rem;
+        }
+
+        .speaker-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .speaker-list li {
+            background: #fff;
+            border: 1px solid var(--border-color);
+            padding: 1rem;
+            margin-bottom: 0.5rem;
+            border-radius: 4px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .speaker-name {
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .speaker-tba {
+            color: var(--text-muted);
+            font-style: italic;
+        }
+
+        /* Schedule Table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            background: #fff;
+        }
+
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        th {
+            background-color: #f4f4f4;
+            font-weight: 600;
+            color: var(--text-main);
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border-color);
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 2rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <header>
+            <span class="venue-tag">A Workshop at STOC 2026</span>
+            <h1>Algorithmic Frontiers of Graph and Hypergraph Problems via Global Queries</h1>
+            <div class="meta-info">
+                June 22–24, 2026
+            </div>
+        </header>
+
+        <main>
+            <section id="about">
+                <h2>About the Workshop</h2>
+                <p>
+                    This workshop explores the algorithmic landscape of graph and hypergraph problems under query access models. We study settings where the vertex set is known, but the underlying edge structure is hidden and accessible only via global aggregate queries—such as the CUT query, which returns the number or total weight of edges crossing a given cut. Our central objective is to map the query complexity of fundamental problems in this regime.
+                </p>
+                
+                <h3>Core Themes & Goals</h3>
+                <ul>
+                    <li><strong>Practical APIs & Implicit Graphs:</strong> Navigating real-world networks that are massive or hidden behind subset-based probing APIs.</li>
+                    <li><strong>Theoretical Bridges:</strong> Connecting combinatorial search with broader optimization theory, mapping problems like minimum cut to submodular function minimization (SFM).</li>
+                    <li><strong>Technique Unification:</strong> Bridging algorithmic techniques with distributed computing, sublinear algorithms, and beyond.</li>
+                    <li><strong>The Lower Bound Frontier:</strong> Understanding and advancing existing frameworks for proving information-theoretic lower bounds via communication complexity and other methods.</li>
+                </ul>
+            </section>
+
+            <section id="speakers">
+                <h2>Tentative Speakers</h2>
+                
+                <div class="speaker-day">
+                    <h3>Monday, June 22</h3>
+                    <ul class="speaker-list">
+                        <li><span class="speaker-name">Deeparnab Chakrabarty</span></li>
+                        <li><span class="speaker-name">Sagnik Mukhopadhyay</span></li>
+                        <li><span class="speaker-name">Louie Putterman</span></li>
+                    </ul>
+                </div>
+
+                <div class="speaker-day">
+                    <h3>Tuesday, June 23</h3>
+                    <ul class="speaker-list">
+                        <li><span class="speaker-name">Robi Krauthgamer</span></li>
+                        <li><span class="speaker-name">Sanjeev Khanna</span></li>
+                        <li><span class="speaker-name">Troy Lee</span></li>
+                    </ul>
+                </div>
+
+                <div class="speaker-day">
+                    <h3>Wednesday, June 24</h3>
+                    <ul class="speaker-list">
+                        <li><span class="speaker-name">David Woodruff</span></li>
+                        <li><span class="speaker-name">Sepehr Assadi</span></li>
+                        <li><span class="speaker-tba">Speaker TBA</span></li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="schedule">
+                <h2>Detailed Schedule</h2>
+                <p><em>The full schedule will be announced closer to the workshop date.</em></p>
+                <!-- Placeholder table for easy future editing -->
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Time</th>
+                            <th>Event / Speaker</th>
+                            <th>Title</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>09:00 - 09:15</td>
+                            <td><strong>Organizers</strong></td>
+                            <td>Opening Remarks</td>
+                        </tr>
+                        <tr>
+                            <td>09:15 - 10:15</td>
+                            <td><strong>Speaker Name</strong></td>
+                            <td>Talk Title Goes Here</td>
+                        </tr>
+                        <tr>
+                            <td>10:15 - 10:45</td>
+                            <td><em>Coffee Break</em></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+
+        <footer>
+            <p>Algorithmic Frontiers of Graph and Hypergraph Problems via Global Queries &copy; 2026</p>
+            <p>Hosted in conjunction with the Annual ACM Symposium on Theory of Computing (STOC).</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
