@@ -12,6 +12,9 @@
             --accent-blue: #0A437A;
             --bg-color: #FAFAFA;
             --border-color: #E0E0E0;
+            --banner-bg: #FFF8E1; /* Soft warning yellow */
+            --banner-text: #5D4037; /* Muted brown for readability */
+            --banner-border: #FFECB3;
         }
 
         body {
@@ -21,6 +24,19 @@
             background-color: var(--bg-color);
             margin: 0;
             padding: 0;
+        }
+
+        /* Construction Banner */
+        .construction-banner {
+            background-color: var(--banner-bg);
+            color: var(--banner-text);
+            text-align: center;
+            padding: 10px 20px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            border-bottom: 1px solid var(--banner-border);
+            width: 100%;
+            box-sizing: border-box;
         }
 
         /* Layout & Container */
@@ -35,7 +51,7 @@
             border-bottom: 2px solid var(--accent-blue);
             padding-bottom: 2rem;
             margin-bottom: 3rem;
-            margin-top: 3rem;
+            margin-top: 1rem;
         }
 
         .venue-tag {
@@ -157,6 +173,11 @@
     </style>
 </head>
 <body>
+
+    <!-- Construction Banner added here -->
+    <div class="construction-banner">
+        <strong>Notice:</strong> This website is currently under construction and will be updated frequently.
+    </div>
 
     <div class="container">
         
