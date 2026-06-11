@@ -4,6 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>STOC 2026 Workshop: Algorithmic Frontiers via Global Queries</title>
+    <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']]
+    }
+  };
+</script>
+<script id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
     <style>
         /* Minimalist Academic Theme */
         :root {
@@ -12,9 +22,10 @@
             --accent-blue: #0A437A;
             --bg-color: #FAFAFA;
             --border-color: #E0E0E0;
-            --banner-bg: #FFF8E1; /* Soft warning yellow */
-            --banner-text: #5D4037; /* Muted brown for readability */
+            --banner-bg: #FFF8E1; 
+            --banner-text: #5D4037; 
             --banner-border: #FFECB3;
+            --time-bg: #EAF2F8;
         }
 
         body {
@@ -102,7 +113,7 @@
             font-size: 1.05rem;
         }
 
-        /* Speaker Layout */
+        /* Speaker Layout & Expandable Details */
         .speaker-day {
             margin-bottom: 2rem;
         }
@@ -110,54 +121,110 @@
         .speaker-day h3 {
             font-size: 1.2rem;
             color: var(--accent-blue);
-            margin-bottom: 0.5rem;
+            margin-bottom: 1rem;
+            border-bottom: 1px dashed var(--border-color);
+            padding-bottom: 0.5rem;
         }
 
-        .speaker-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .speaker-list li {
+        details.speaker-block {
             background: #fff;
             border: 1px solid var(--border-color);
-            padding: 1rem;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.75rem;
             border-radius: 4px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+        }
+
+        /* Style the clickable summary */
+        details.speaker-block summary {
+            padding: 1rem;
+            cursor: pointer;
+            list-style: none; /* Hide default arrow in standard browsers */
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
+        /* Hide default arrow in Safari */
+        details.speaker-block summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .summary-content {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .speaker-time {
+            font-family: monospace;
+            font-size: 0.95rem;
+            color: var(--accent-blue);
+            background-color: var(--time-bg);
+            padding: 0.3rem 0.6rem;
+            border-radius: 4px;
+            white-space: nowrap;
+            font-weight: 600;
+        }
+
         .speaker-name {
             font-weight: 600;
             font-size: 1.1rem;
+            color: var(--text-main);
         }
 
-        .speaker-tba {
-            color: var(--text-muted);
-            font-style: italic;
+        /* Custom plus/minus icon for summary */
+        details.speaker-block summary::after {
+            content: '+';
+            font-size: 1.2rem;
+            color: var(--accent-blue);
+            font-weight: normal;
         }
 
-        /* Schedule Table */
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 1rem;
-            background: #fff;
+        details.speaker-block[open] summary::after {
+            content: '−'; /* minus sign */
         }
 
-        th, td {
-            padding: 12px 15px;
-            text-align: left;
+        details.speaker-block[open] summary {
             border-bottom: 1px solid var(--border-color);
+            background-color: #f9fbfd;
         }
 
-        th {
-            background-color: #f4f4f4;
+        /* Content inside the expandable block */
+        .speaker-info {
+            padding: 1.25rem 1rem;
+            color: var(--text-muted);
+        }
+
+        .talk-title {
             font-weight: 600;
             color: var(--text-main);
+            margin-bottom: 0.5rem;
+            font-size: 1.05rem;
+            display: block;
+        }
+
+        .speaker-info p {
+            margin-bottom: 0;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        /* TBA block styling */
+        .speaker-tba-block {
+            background: #fff;
+            border: 1px dashed var(--border-color);
+            padding: 1rem;
+            margin-bottom: 0.75rem;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .speaker-tba-text {
+            color: var(--text-muted);
+            font-style: italic;
+            font-size: 1.1rem;
         }
 
         /* Footer */
@@ -174,7 +241,6 @@
 </head>
 <body>
 
-    <!-- Construction Banner added here -->
     <div class="construction-banner">
         <strong>Notice:</strong> This website is currently under construction and will be updated frequently.
     </div>
@@ -182,7 +248,7 @@
     <div class="container">
         
         <header>
-            <span class="venue-tag">A Workshop at <a href="https://acm-stoc.org/stoc2026/index.html">STOC 2026</a></span>
+            <span class="venue-tag">A Workshop at STOC 2026</span>
             <h1>Algorithmic Frontiers of Graph and Hypergraph Problems via Global Queries</h1>
             <div class="meta-info">
                 June 22–24, 2026
@@ -193,7 +259,7 @@
             <section id="about">
                 <h2>About the Workshop</h2>
                 <p>
-                    This workshop explores the algorithmic landscape of graph and hypergraph problems under query access models. We study settings where the vertex set is known, but the underlying edge structure is hidden and accessible only via global aggregate queries, such as the CUT query, which returns the number or total weight of edges crossing a given cut. Our central objective is to map the query complexity of fundamental problems in this regime.
+                    This workshop explores the algorithmic landscape of graph and hypergraph problems under query access models. We study settings where the vertex set is known, but the underlying edge structure is hidden and accessible only via global aggregate queries—such as the CUT query, which returns the number or total weight of edges crossing a given cut. Our central objective is to map the query complexity of fundamental problems in this regime.
                 </p>
                 
                 <h3>Core Themes & Goals</h3>
@@ -206,72 +272,172 @@
             </section>
 
             <section id="speakers">
-                <h2>Tentative Speakers</h2>
+                <h2>Schedule & Speakers</h2>
+                <p><em>Click on a speaker's name to view their talk title and abstract.</em></p>
                 
                 <div class="speaker-day">
                     <h3>Monday, June 22</h3>
-                    <ul class="speaker-list">
-                        <li><span class="speaker-name">Deeparnab Chakrabarty</span></li>
-                        <li><span class="speaker-name">Sagnik Mukhopadhyay</span></li>
-                        <li><span class="speaker-name">Louie Putterman</span></li>
-                    </ul>
+                    
+                    <details class="speaker-block">
+                        <summary>
+                            <div class="summary-content">
+                                <span class="speaker-time">08:30 - 09:05</span>
+                                <span class="speaker-name">Deeparnab Chakrabarty (Dartmouth College)</span>
+                            </div>
+                        </summary>
+                        <div class="speaker-info">
+                            <span class="talk-title">Title: To be announced</span>
+                            <p>Abstract will be updated soon.</p>
+                        </div>
+                    </details>
+
+                    <details class="speaker-block">
+                        <summary>
+                            <div class="summary-content">
+                                <span class="speaker-time">09:10 - 09:45</span>
+                                <span class="speaker-name">Sagnik Mukhopadhyay (University of Birmingham)</span>
+                            </div>
+                        </summary>
+                        <div class="speaker-info">
+                            <span class="talk-title">Title: To be announced</span>
+                            <p>Abstract will be updated soon.</p>
+                        </div>
+                    </details>
+
+                    <details class="speaker-block">
+                        <summary>
+                            <div class="summary-content">
+                                <span class="speaker-time">09:55 - 10:30</span>
+                                <span class="speaker-name">Louie Putterman (Harvard University)</span>
+                            </div>
+                        </summary>
+                        <div class="speaker-info">
+                            <span class="talk-title">Title: To be announced</span>
+                            <p>Abstract will be updated soon.</p>
+                        </div>
+                    </details>
                 </div>
 
                 <div class="speaker-day">
                     <h3>Tuesday, June 23</h3>
-                    <ul class="speaker-list">
-                        <li><span class="speaker-name">Robi Krauthgamer</span></li>
-                        <li><span class="speaker-name">Sanjeev Khanna</span></li>
-                        <li><span class="speaker-name">Troy Lee</span></li>
-                    </ul>
+                    
+                    <details class="speaker-block">
+                        <summary>
+                            <div class="summary-content">
+                                <span class="speaker-time">08:30 - 09:05</span>
+                                <span class="speaker-name">Robi Krauthgamer (Weizmann)</span>
+                            </div>
+                        </summary>
+                        <div class="speaker-info">
+                            <span class="talk-title">Title: Faster All-Pairs Minimum Cut: Bypassing Exact Max-Flow</span>
+                            <p>All-Pairs Minimum Cut (APMC) is a fundamental graph problem that asks to compute a minimum s,t-cut for every pair of vertices s,t. Recent progress on sequential algorithms for APMC relies on reducing the problem to a small number of exact max-flow computations.
+
+I will present a different approach that yields new algorithms for APMC in unweighted graphs across three computational models: the cut-query model, the streaming model, and the fully dynamic model. These algorithms improve over the previous bounds in these models even for the simpler (single-pair) minimum s,t-cut problem. Our main technical contribution is a new APMC sparsifier constructed using approximate, rather than exact, max-flow computations.
+
+Based on joint work with Yotam Kenneth-Mordoch, with the main results taken from our STOC 2026 paper, but placed in a broader context that includes our ESA 2025 and SODA 2026 papers. </p>
+                        </div>
+                    </details>
+
+                    <details class="speaker-block">
+                        <summary>
+                            <div class="summary-content">
+                                <span class="speaker-time">09:10 - 09:45</span>
+                                <span class="speaker-name">Sanjeev Khanna (NYU)</span>
+                            </div>
+                        </summary>
+                        <div class="speaker-info">
+                            <span class="talk-title">Title: Parallel Basis Finding in Graphic and General Matroids</span>
+                            <p>How many adaptive rounds are needed to find a basis of a matroid using only polynomially many independence queries per round? This question, initiated over 40 years ago in the work of Karp, Upfal, and Wigderson, captures a fundamental challenge in understanding the power of parallelism in the independence-query model. In this talk, I will present recent advances on this problem for both graphic matroids and general matroids. Together, these results resolve long-standing questions about the adaptive round complexity of matroid basis finding.
+
+This is based on joint works with Aaron (Louie) Putterman (Harvard) and Junkai Song (NYU).</p>
+                        </div>
+                    </details>
+
+                    
+                
+
+                    <details class="speaker-block">
+                        <summary>
+                            <div class="summary-content">
+                                <span class="speaker-time">09:55 - 10:30</span>
+                                <span class="speaker-name">Amir Nayyeri (Oregon State University)</span>
+                            </div>
+                        </summary>
+                        <div class="speaker-info">
+                            <span class="talk-title">Title: To be announced</span>
+                            <p>Abstract will be updated soon.</p>
+                        </div>
+                    </details>
                 </div>
 
                 <div class="speaker-day">
                     <h3>Wednesday, June 24</h3>
-                    <ul class="speaker-list">
-                        <li><span class="speaker-name">David Woodruff</span></li>
-                        <li><span class="speaker-name">Sepehr Assadi</span></li>
-                        <li><span class="speaker-tba">Speaker TBA</span></li>
-                    </ul>
-                </div>
-            </section>
 
-            <section id="schedule">
-                <h2>Detailed Schedule</h2>
-                <p><em>The full schedule will be announced closer to the workshop date.</em></p>
-                <!-- Placeholder table for easy future editing 
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Time</th>
-                            <th>Event / Speaker</th>
-                            <th>Title</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>09:00 - 09:15</td>
-                            <td><strong>Organizers</strong></td>
-                            <td>Opening Remarks</td>
-                        </tr>
-                        <tr>
-                            <td>09:15 - 10:15</td>
-                            <td><strong>Speaker Name</strong></td>
-                            <td>Talk Title Goes Here</td>
-                        </tr>
-                        <tr>
-                            <td>10:15 - 10:45</td>
-                            <td><em>Coffee Break</em></td>
-                            <td></td>
-                        </tr>
-                    </tbody>
-                </table>-->
+                    <details class="speaker-block">
+                        <summary>
+                            <div class="summary-content">
+                                <span class="speaker-time">08:30 - 09:05</span>
+                                <span class="speaker-name">Troy Lee (University of Technology Sydney)</span>
+                            </div>
+                        </summary>
+                        <div class="speaker-info">
+                            <span class="talk-title">Title: On the Power of Quantum Cut Queries</span>
+                            <p> No knowledge of quantum is needed for this talk.  Instead,
+we will speak
+in terms of a restricted form of a matrix-vector product,
+which can be simulated efficiently with quantum cut queries.  We will see how
+to compute edge connectivity with tilde $O(\sqrt{n})$ applications of
+these primitives, by
+means of a technique called star contraction.  Like 2-out contraction,
+star contraction preserves min cuts of
+a graph $G$ with high probability while reducing the number of vertices
+to roughly $n / \text{min-degree}(G)$,
+but star contraction has an advantage of parallelism that allows it to
+be efficiently implemented
+by our restricted matrix-vector product query.  Finally, we will
+mention an open problem related
+to a model of certificate complexity, which has many capabilities
+similar to quantum cut queries, but
+for which we do not know an $o(n)$ upper bound for edge connectivity..</p>
+                        </div>
+                    </details>
+                    
+                    <details class="speaker-block">
+                        <summary>
+                            <div class="summary-content">
+                                <span class="speaker-time">09:10 - 09:45</span>
+                                <span class="speaker-name">David Woodruff (CMU)</span>
+                            </div>
+                        </summary>
+                        <div class="speaker-info">
+                            <span class="talk-title">Title: Combinatorial Optimization Using Comparison Oracles</span>
+                            <p>We aim to find $S* = \arg\min_{S \in F} \langle w, 1_S \rangle$ for a family $F$ of subsets of a ground set of $n$ elements. Traditionally the weight vector $w$ is available through a value oracle. We study the weaker and more robust comparison oracle, where for any $S, T \in F$, when we make a query we only learn if $w(S) < w(T)$ or $w(S) = w(T)$. We investigate the query complexity and computational efficiency of combinatorial optimization in this model. My talk will be focused on cut problems, in particular, min and max cut, both in weighted and unweighted settings. We use the notion of inference dimension to develop surprisingly query-efficient though time-expensive algorithms in the weighted case. We then give a new global subspace learning algorithm which improves the query complexity of inference-dimension based algorithms when the weights are integers of value at most $n$. Finally in the unweighted case we give query and time efficient algorithms.
+
+Based on joint work with my coauthors here: https://arxiv.org/abs/2511.15142</p>
+                        </div>
+                    </details>
+
+                    <details class="speaker-block">
+                        <summary>
+                            <div class="summary-content">
+                                <span class="speaker-time">09:55 - 10:30</span>
+                                <span class="speaker-name">Sepehr Assadi (University of Waterloo)</span>
+                            </div>
+                        </summary>
+                        <div class="speaker-info">
+                            <span class="talk-title">Title: To be announced</span>
+                            <p>Abstract will be updated soon.</p>
+                        </div>
+                    </details>
+
+                    
+                </div>
             </section>
         </main>
 
         <footer>
             <p>Algorithmic Frontiers of Graph and Hypergraph Problems via Global Queries &copy; 2026</p>
-            <p>Hosted in conjunction with the <a href="https://acm-stoc.org/stoc2026/index.html">Annual ACM Symposium on Theory of Computing (STOC)</a>.</p>
+            <p>Hosted in conjunction with the Annual ACM Symposium on Theory of Computing (STOC).</p>
         </footer>
 
     </div>
