@@ -1,20 +1,20 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>STOC 2026 Workshop: Algorithmic Frontiers via Global Queries</title>
-    <script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>STOC 2026 Workshop: Algorithmic Frontiers via Global Queries</title>
+<script>
   MathJax = {
     tex: {
       inlineMath: [['$', '$'], ['\\(', '\\)']]
     }
   };
 </script>
-<script id="MathJax-script" async
-  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+<script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
 </script>
-    <style>
+<style>
         /* Minimalist Academic Theme */
         a {
     color: var(--accent-blue);
@@ -234,6 +234,32 @@ a:hover {
             font-size: 1.1rem;
         }
 
+
+
+        /* Resource links */
+        .speaker-resources {
+            margin-top: 1rem;
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+        }
+
+        .resource-link {
+            display: inline-block;
+            padding: 0.35rem 0.7rem;
+            border: 1px solid var(--accent-blue);
+            border-radius: 4px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--accent-blue);
+            background: #fff;
+        }
+
+        .resource-link:hover {
+            background: var(--time-bg);
+            text-decoration: none;
+        }
+
         /* Footer */
         footer {
             margin-top: 4rem;
@@ -247,158 +273,149 @@ a:hover {
     </style>
 </head>
 <body>
-
-    <div class="construction-banner">
-        <strong>Notice:</strong> This website is currently under construction and will be updated frequently.
+<div class="construction-banner">
+<strong>Notice:</strong> This website is currently under construction and will be updated frequently.
     </div>
-
-    <div class="container">
-        
-        <header>
-            <span class="venue-tag">A Workshop at STOC 2026</span>
-            <h1>Algorithmic Frontiers of Graph and Hypergraph Problems via Global Queries</h1>
-            <div class="meta-info">
+<div class="container">
+<header>
+<span class="venue-tag">A Workshop at STOC 2026</span>
+<h1>Algorithmic Frontiers of Graph and Hypergraph Problems via Global Queries</h1>
+<div class="meta-info">
                 June 22–24, 2026
             </div>
-            <div class="org-info">
-                Organisers: <a href="https://www.cs.dartmouth.edu/~deepc/">Deeparnab Chakrabarty</a> & <a href="https://sagnikm.github.io/">Sagnik Mukhopadhyay</a>
-            </div>
-        </header>
-
-        <main>
-            <section id="about">
-                <h2>About the Workshop</h2>
-                <p>
+<div class="org-info">
+                Organisers: <a href="https://www.cs.dartmouth.edu/~deepc/">Deeparnab Chakrabarty</a> &amp; <a href="https://sagnikm.github.io/">Sagnik Mukhopadhyay</a>
+</div>
+</header>
+<main>
+<section id="about">
+<h2>About the Workshop</h2>
+<p>
                     This workshop explores the algorithmic landscape of graph and hypergraph problems under query access models. We study settings where the vertex set is known, but the underlying edge structure is hidden and accessible only via global aggregate queries—such as the CUT query, which returns the number or total weight of edges crossing a given cut. Our central objective is to map the query complexity of fundamental problems in this regime.
                 </p>
-                
-                <h3>Core Themes & Goals</h3>
-                <ul>
-                    <li><strong>Practical APIs & Implicit Graphs:</strong> Navigating real-world networks that are massive or hidden behind subset-based probing APIs.</li>
-                    <li><strong>Theoretical Bridges:</strong> Connecting combinatorial search with broader optimization theory, mapping problems like minimum cut to submodular function minimization (SFM).</li>
-                    <li><strong>Technique Unification:</strong> Bridging algorithmic techniques with distributed computing, sublinear algorithms, and beyond.</li>
-                    <li><strong>The Lower Bound Frontier:</strong> Understanding and advancing existing frameworks for proving information-theoretic lower bounds via communication complexity and other methods.</li>
-                </ul>
-            </section>
+<h3>Core Themes &amp; Goals</h3>
+<ul>
+<li><strong>Practical APIs &amp; Implicit Graphs:</strong> Navigating real-world networks that are massive or hidden behind subset-based probing APIs.</li>
+<li><strong>Theoretical Bridges:</strong> Connecting combinatorial search with broader optimization theory, mapping problems like minimum cut to submodular function minimization (SFM).</li>
+<li><strong>Technique Unification:</strong> Bridging algorithmic techniques with distributed computing, sublinear algorithms, and beyond.</li>
+<li><strong>The Lower Bound Frontier:</strong> Understanding and advancing existing frameworks for proving information-theoretic lower bounds via communication complexity and other methods.</li>
+</ul>
+</section>
+<section id="speakers">
+<h2>Schedule &amp; Speakers</h2>
+<p><em>Click on a speaker's name to view their talk title and abstract.</em></p>
+<div class="speaker-day">
+<h3>Monday, June 22</h3>
+<details class="speaker-block">
+<summary>
+<div class="summary-content">
+<span class="speaker-time">08:30 - 09:05</span>
+<span class="speaker-name">Deeparnab Chakrabarty (Dartmouth College)</span>
+</div>
+</summary>
+<div class="speaker-info">
+<span class="talk-title">Title: Introduction to global queries via an incomplete survey</span>
+<p>In this talk, I will go over some basic examples of "global queries" focusing on the kinds covered in the workshop.
 
-            <section id="speakers">
-                <h2>Schedule & Speakers</h2>
-                <p><em>Click on a speaker's name to view their talk title and abstract.</em></p>
-                
-                <div class="speaker-day">
-                    <h3>Monday, June 22</h3>
-                    
-                    <details class="speaker-block">
-                        <summary>
-                            <div class="summary-content">
-                                <span class="speaker-time">08:30 - 09:05</span>
-                                <span class="speaker-name">Deeparnab Chakrabarty (Dartmouth College)</span>
-                            </div>
-                        </summary>
-                        <div class="speaker-info">
-                            <span class="talk-title">Title: Introduction to global queries via an incomplete survey</span>
-                            <p>In this talk, I will go over some basic examples of "global queries" focusing on the kinds covered in the workshop.
-
-After that, the talk will be in three parts: (a) "classical portion" from the 50s, which will be about reconstructing vectors (aka group testing & coin-weighing), (b) "(hyper)-graph reconstruction portion" from the late 90s, early aughts using stuff from (a), and (c) "modern-considerations" portion beginning with the works of Rubinstein et al & Beame et al, both from ITCS 2018, which ask the complexity of algorithmic questions on (hyper)-graphs using global query models.
+After that, the talk will be in three parts: (a) "classical portion" from the 50s, which will be about reconstructing vectors (aka group testing &amp; coin-weighing), (b) "(hyper)-graph reconstruction portion" from the late 90s, early aughts using stuff from (a), and (c) "modern-considerations" portion beginning with the works of Rubinstein et al &amp; Beame et al, both from ITCS 2018, which ask the complexity of algorithmic questions on (hyper)-graphs using global query models.
 
 The main goal of the talk is to hopefully serve as an introduction to the remaining tutorial talks of the day, and possibly the rest of the workshop.</p>
-                        </div>
-                    </details>
 
-                    
-                    <details class="speaker-block">
-                        <summary>
-                            <div class="summary-content">
-                                <span class="speaker-time">09:10 - 09:45</span>
-                                <span class="speaker-name">Louie Putterman (Harvard University)</span>
-                            </div>
-                        </summary>
-                        <div class="speaker-info">
-                            <span class="talk-title">Title: (More) Recent Advances in Cut Query Algorithms</span>
-                            <p>In this talk, I will survey recent developments in the use of cut-query algorithms for graph sparsification, computing maximum flows in graphs, and computing minimum cuts in hypergraphs. This will mostly cover the work of Rubinstein, Schramm, and Weinberg and build the foundation for many of the upcoming talks.</p>
-                        </div>
-                    </details>
+<div class="speaker-resources"><a class="resource-link" href="./chakrabarty-slides.pdf" rel="noopener noreferrer" target="_blank">Slides</a></div>
+</div>
+</details>
+<details class="speaker-block">
+<summary>
+<div class="summary-content">
+<span class="speaker-time">09:10 - 09:45</span>
+<span class="speaker-name">Louie Putterman (Harvard University)</span>
+</div>
+</summary>
+<div class="speaker-info">
+<span class="talk-title">Title: (More) Recent Advances in Cut Query Algorithms</span>
+<p>In this talk, I will survey recent developments in the use of cut-query algorithms for graph sparsification, computing maximum flows in graphs, and computing minimum cuts in hypergraphs. This will mostly cover the work of Rubinstein, Schramm, and Weinberg and build the foundation for many of the upcoming talks.</p>
 
-                    <details class="speaker-block">
-                        <summary>
-                            <div class="summary-content">
-                                <span class="speaker-time">09:55 - 10:30</span>
-                                <span class="speaker-name">Sagnik Mukhopadhyay (University of Birmingham)</span>
-                            </div>
-                        </summary>
-                        <div class="speaker-info">
-                            <span class="talk-title">Title: (Even More) Recent Advances in Cut Query Algorithms</span>
-                            <p>In this talk, I will talk about cut query algorithms for edge connectivity, minimum cut and bipartite matching. I will attempt to cover the main ideas from Blikstad et al. (FOCS 2022), Apers et al. (FOCS 2022) and Mukhopadhyay-Nanongkai (STOC 2020).</p>
-                        </div>
-                    </details>
+<div class="speaker-resources"><a class="resource-link" href="./putterman-slides.pdf" rel="noopener noreferrer" target="_blank">Slides</a></div>
+</div>
+</details>
+<details class="speaker-block">
+<summary>
+<div class="summary-content">
+<span class="speaker-time">09:55 - 10:30</span>
+<span class="speaker-name">Sagnik Mukhopadhyay (University of Birmingham)</span>
+</div>
+</summary>
+<div class="speaker-info">
+<span class="talk-title">Title: (Even More) Recent Advances in Cut Query Algorithms</span>
+<p>In this talk, I will talk about cut query algorithms for edge connectivity, minimum cut and bipartite matching. I will attempt to cover the main ideas from Blikstad et al. (FOCS 2022), Apers et al. (FOCS 2022) and Mukhopadhyay-Nanongkai (STOC 2020).</p>
 
-                </div>
-
-                <div class="speaker-day">
-                    <h3>Tuesday, June 23</h3>
-                    
-                    <details class="speaker-block">
-                        <summary>
-                            <div class="summary-content">
-                                <span class="speaker-time">08:45 - 09:20</span>
-                                <span class="speaker-name">Robi Krauthgamer (Weizmann)</span>
-                            </div>
-                        </summary>
-                        <div class="speaker-info">
-                            <span class="talk-title">Title: Faster All-Pairs Minimum Cut: Bypassing Exact Max-Flow</span>
-                            <p>All-Pairs Minimum Cut (APMC) is a fundamental graph problem that asks to compute a minimum s,t-cut for every pair of vertices s,t. Recent progress on sequential algorithms for APMC relies on reducing the problem to a small number of exact max-flow computations.
+<div class="speaker-resources"><a class="resource-link" href="./mukhopadhyay-slides.pdf" rel="noopener noreferrer" target="_blank">Slides</a></div>
+</div>
+</details>
+</div>
+<div class="speaker-day">
+<h3>Tuesday, June 23</h3>
+<details class="speaker-block">
+<summary>
+<div class="summary-content">
+<span class="speaker-time">08:45 - 09:20</span>
+<span class="speaker-name">Robi Krauthgamer (Weizmann)</span>
+</div>
+</summary>
+<div class="speaker-info">
+<span class="talk-title">Title: Faster All-Pairs Minimum Cut: Bypassing Exact Max-Flow</span>
+<p>All-Pairs Minimum Cut (APMC) is a fundamental graph problem that asks to compute a minimum s,t-cut for every pair of vertices s,t. Recent progress on sequential algorithms for APMC relies on reducing the problem to a small number of exact max-flow computations.
 
 I will present a different approach that yields new algorithms for APMC in unweighted graphs across three computational models: the cut-query model, the streaming model, and the fully dynamic model. These algorithms improve over the previous bounds in these models even for the simpler (single-pair) minimum s,t-cut problem. Our main technical contribution is a new APMC sparsifier constructed using approximate, rather than exact, max-flow computations.
 
 Based on joint work with Yotam Kenneth-Mordoch, with the main results taken from our STOC 2026 paper, but placed in a broader context that includes our ESA 2025 and SODA 2026 papers. </p>
-                        </div>
-                    </details>
 
-                    <details class="speaker-block">
-                        <summary>
-                            <div class="summary-content">
-                                <span class="speaker-time">09:25 - 10:00</span>
-                                <span class="speaker-name">Sanjeev Khanna (NYU)</span>
-                            </div>
-                        </summary>
-                        <div class="speaker-info">
-                            <span class="talk-title">Title: Parallel Basis Finding in Graphic and General Matroids</span>
-                            <p>How many adaptive rounds are needed to find a basis of a matroid using only polynomially many independence queries per round? This question, initiated over 40 years ago in the work of Karp, Upfal, and Wigderson, captures a fundamental challenge in understanding the power of parallelism in the independence-query model. In this talk, I will present recent advances on this problem for both graphic matroids and general matroids. Together, these results resolve long-standing questions about the adaptive round complexity of matroid basis finding.
+<div class="speaker-resources"><a class="resource-link" href="./krauthgamer-slides.pdf" rel="noopener noreferrer" target="_blank">Slides</a></div>
+</div>
+</details>
+<details class="speaker-block">
+<summary>
+<div class="summary-content">
+<span class="speaker-time">09:25 - 10:00</span>
+<span class="speaker-name">Sanjeev Khanna (NYU)</span>
+</div>
+</summary>
+<div class="speaker-info">
+<span class="talk-title">Title: Parallel Basis Finding in Graphic and General Matroids</span>
+<p>How many adaptive rounds are needed to find a basis of a matroid using only polynomially many independence queries per round? This question, initiated over 40 years ago in the work of Karp, Upfal, and Wigderson, captures a fundamental challenge in understanding the power of parallelism in the independence-query model. In this talk, I will present recent advances on this problem for both graphic matroids and general matroids. Together, these results resolve long-standing questions about the adaptive round complexity of matroid basis finding.
 
 This is based on joint works with Aaron (Louie) Putterman (Harvard) and Junkai Song (NYU).</p>
-                        </div>
-                    </details>
 
-                    
-                
+<div class="speaker-resources"><a class="resource-link" href="./khanna-slides.pdf" rel="noopener noreferrer" target="_blank">Slides</a></div>
+</div>
+</details>
+<details class="speaker-block">
+<summary>
+<div class="summary-content">
+<span class="speaker-time">10:10 - 10:45</span>
+<span class="speaker-name">Amir Nayyeri (Oregon State University)</span>
+</div>
+</summary>
+<div class="speaker-info">
+<span class="talk-title">Title: Graph Inference with Distance Queries</span>
+<p>Suppose you are given the vertices of a graph, but not its edges. The only way to learn the topology is to query the distance between two vertices. How many queries are needed to reconstruct the graph? And if full reconstruction is too expensive, what graph properties can still be inferred with relatively few queries? In this talk, I will survey graph inference from two kinds of distance queries: shortest-path distance and effective resistance. For shortest-path queries, we now know several lower bounds and algorithms: general reconstruction requires quadratically many queries without structural assumptions, while bounded-degree connected graphs admit subquadratic algorithms, and several tree-like graph families admit near-linear algorithms. Effective-resistance inference is much less developed. All pairwise effective resistances determine the graph, giving a quadratic-query reconstruction algorithm. The challenge is to understand what kinds of inference are possible with asymptotically fewer queries. I will discuss known and recent results for reconstruction and property inference, and compare the algorithmic ideas that work in the shortest-path and effective-resistance settings. The talk is based in part on joint works with Mitchell Black, Huck Bennett, Chirag Kaudan, and Evelyn Warton.</p>
 
-                    <details class="speaker-block">
-                        <summary>
-                            <div class="summary-content">
-                                <span class="speaker-time">10:10 - 10:45</span>
-                                <span class="speaker-name">Amir Nayyeri (Oregon State University)</span>
-                            </div>
-                        </summary>
-                        <div class="speaker-info">
-                            <span class="talk-title">Title: Graph Inference with Distance Queries</span>
-                            <p>Suppose you are given the vertices of a graph, but not its edges. The only way to learn the topology is to query the distance between two vertices. How many queries are needed to reconstruct the graph? And if full reconstruction is too expensive, what graph properties can still be inferred with relatively few queries? In this talk, I will survey graph inference from two kinds of distance queries: shortest-path distance and effective resistance. For shortest-path queries, we now know several lower bounds and algorithms: general reconstruction requires quadratically many queries without structural assumptions, while bounded-degree connected graphs admit subquadratic algorithms, and several tree-like graph families admit near-linear algorithms. Effective-resistance inference is much less developed. All pairwise effective resistances determine the graph, giving a quadratic-query reconstruction algorithm. The challenge is to understand what kinds of inference are possible with asymptotically fewer queries. I will discuss known and recent results for reconstruction and property inference, and compare the algorithmic ideas that work in the shortest-path and effective-resistance settings. The talk is based in part on joint works with Mitchell Black, Huck Bennett, Chirag Kaudan, and Evelyn Warton.</p>
-                        </div>
-                    </details>
-                </div>
-
-                <div class="speaker-day">
-                    <h3>Wednesday, June 24</h3>
-
-                    <details class="speaker-block">
-                        <summary>
-                            <div class="summary-content">
-                                <span class="speaker-time">08:45 - 09:20</span>
-                                <span class="speaker-name">Troy Lee (University of Technology Sydney)</span>
-                            </div>
-                        </summary>
-                        <div class="speaker-info">
-                            <span class="talk-title">Title: On the Power of Quantum Cut Queries</span>
-                            <p> No knowledge of quantum is needed for this talk.  Instead,
+<div class="speaker-resources"><a class="resource-link" href="./nayyeri-slides.pdf" rel="noopener noreferrer" target="_blank">Slides</a></div>
+</div>
+</details>
+</div>
+<div class="speaker-day">
+<h3>Wednesday, June 24</h3>
+<details class="speaker-block">
+<summary>
+<div class="summary-content">
+<span class="speaker-time">08:45 - 09:20</span>
+<span class="speaker-name">Troy Lee (University of Technology Sydney)</span>
+</div>
+</summary>
+<div class="speaker-info">
+<span class="talk-title">Title: On the Power of Quantum Cut Queries</span>
+<p> No knowledge of quantum is needed for this talk.  Instead,
 we will speak
 in terms of a restricted form of a matrix-vector product,
 which can be simulated efficiently with quantum cut queries.  We will see how
@@ -415,52 +432,48 @@ mention an open problem related
 to a model of certificate complexity, which has many capabilities
 similar to quantum cut queries, but
 for which we do not know an $o(n)$ upper bound for edge connectivity..</p>
-                        </div>
-                    </details>
-                    
-                    <details class="speaker-block">
-                        <summary>
-                            <div class="summary-content">
-                                <span class="speaker-time">09:25 - 10:00</span>
-                                <span class="speaker-name">David Woodruff (CMU)</span>
-                            </div>
-                        </summary>
-                        <div class="speaker-info">
-                            <span class="talk-title">Title: Combinatorial Optimization Using Comparison Oracles</span>
-                            <p>We aim to find $S* = \arg\min_{S \in F} \langle w, 1_S \rangle$ for a family $F$ of subsets of a ground set of $n$ elements. Traditionally the weight vector $w$ is available through a value oracle. We study the weaker and more robust comparison oracle, where for any $S, T \in F$, when we make a query we only learn if $w(S) < w(T)$ or $w(S) = w(T)$. We investigate the query complexity and computational efficiency of combinatorial optimization in this model. My talk will be focused on cut problems, in particular, min and max cut, both in weighted and unweighted settings. We use the notion of inference dimension to develop surprisingly query-efficient though time-expensive algorithms in the weighted case. We then give a new global subspace learning algorithm which improves the query complexity of inference-dimension based algorithms when the weights are integers of value at most $n$. Finally in the unweighted case we give query and time efficient algorithms.
+
+<div class="speaker-resources"><a class="resource-link" href="./lee-slides.pdf" rel="noopener noreferrer" target="_blank">Slides</a></div>
+</div>
+</details>
+<details class="speaker-block">
+<summary>
+<div class="summary-content">
+<span class="speaker-time">09:25 - 10:00</span>
+<span class="speaker-name">David Woodruff (CMU)</span>
+</div>
+</summary>
+<div class="speaker-info">
+<span class="talk-title">Title: Combinatorial Optimization Using Comparison Oracles</span>
+<p>We aim to find $S* = \arg\min_{S \in F} \langle w, 1_S \rangle$ for a family $F$ of subsets of a ground set of $n$ elements. Traditionally the weight vector $w$ is available through a value oracle. We study the weaker and more robust comparison oracle, where for any $S, T \in F$, when we make a query we only learn if $w(S) &lt; w(T)$ or $w(S) = w(T)$. We investigate the query complexity and computational efficiency of combinatorial optimization in this model. My talk will be focused on cut problems, in particular, min and max cut, both in weighted and unweighted settings. We use the notion of inference dimension to develop surprisingly query-efficient though time-expensive algorithms in the weighted case. We then give a new global subspace learning algorithm which improves the query complexity of inference-dimension based algorithms when the weights are integers of value at most $n$. Finally in the unweighted case we give query and time efficient algorithms.
 
 Based on joint work with my coauthors here: https://arxiv.org/abs/2511.15142</p>
-                            <div class="speaker-resources">
-                                <a href="#" class="resource-link">Slides</a>
-                                <a href="#" class="resource-link">Video</a>
-                            </div>
-                        </div>
-                    </details>
 
-                    <details class="speaker-block">
-                        <summary>
-                            <div class="summary-content">
-                                <span class="speaker-time">10:10 - 10:45</span>
-                                <span class="speaker-name">Sepehr Assadi (University of Waterloo)</span>
-                            </div>
-                        </summary>
-                        <div class="speaker-info">
-                            <span class="talk-title">Title: Lower Bound Techniques for Global Graph Queries</span>
-                            <p>This talk will be a tutorial on several related techniques for proving lower bounds on the query complexity of graph problems, focusing on different types of global queries. These techniques range from reconstruction arguments, (parity) decision trees, communication complexity, and extremal combinatorics arguments.</p>
-                        </div>
-                    </details>
 
-                    
-                </div>
-            </section>
-        </main>
+<div class="speaker-resources"><a class="resource-link" href="./woodruff-slides.pdf" rel="noopener noreferrer" target="_blank">Slides</a></div>
+</div>
+</details>
+<details class="speaker-block">
+<summary>
+<div class="summary-content">
+<span class="speaker-time">10:10 - 10:45</span>
+<span class="speaker-name">Sepehr Assadi (University of Waterloo)</span>
+</div>
+</summary>
+<div class="speaker-info">
+<span class="talk-title">Title: Lower Bound Techniques for Global Graph Queries</span>
+<p>This talk will be a tutorial on several related techniques for proving lower bounds on the query complexity of graph problems, focusing on different types of global queries. These techniques range from reconstruction arguments, (parity) decision trees, communication complexity, and extremal combinatorics arguments.</p>
 
-        <footer>
-            <p>Algorithmic Frontiers of Graph and Hypergraph Problems via Global Queries &copy; 2026</p>
-            <p>Hosted in conjunction with the Annual ACM Symposium on Theory of Computing (STOC).</p>
-        </footer>
-
-    </div>
-
+<div class="speaker-resources"><a class="resource-link" href="./assadi-slides.pdf" rel="noopener noreferrer" target="_blank">Slides</a></div>
+</div>
+</details>
+</div>
+</section>
+</main>
+<footer>
+<p>Algorithmic Frontiers of Graph and Hypergraph Problems via Global Queries © 2026</p>
+<p>Hosted in conjunction with the Annual ACM Symposium on Theory of Computing (STOC).</p>
+</footer>
+</div>
 </body>
 </html>
