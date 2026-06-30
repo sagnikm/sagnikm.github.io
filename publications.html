@@ -1,157 +1,238 @@
 <!DOCTYPE html>
-<!--
-    Plain-Academic by Vasilios Mavroudis
-    Released under the Simplified BSD License/FreeBSD (2-clause) License.
-    https://github.com/mavroudisv/plain-academic
--->
 
 <html lang="en">
 <head>
-  <title>Sagnik Mukhopadhyay</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-  <link href='https://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="./font-awesome/css/font-awesome.min.css">
-  <link rel="stylesheet" href="./academicons/css/academicons.min.css"/>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Publications | Sagnik Mukhopadhyay</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<style>
+        /* [Exact same base CSS as index.html] */
+        :root {
+            --primary: #1e3a8a;
+            --text-main: #334155;
+            --text-light: #64748b;
+            --bg-body: #f8fafc;
+            --bg-card: #ffffff;
+            --accent: #eff6ff;
+            --border: #e2e8f0;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Inter', sans-serif; color: var(--text-main); background-color: var(--bg-body); line-height: 1.7; font-size: 16px; }
+        a { color: var(--primary); text-decoration: none; transition: all 0.2s ease; }
+        a:hover { color: #1e40af; text-decoration: underline; }
+        
+        .container { max-width: 1100px; margin: 0 auto; padding: 40px 20px; display: grid; grid-template-columns: 300px 1fr; gap: 50px; }
+        .sidebar { background: var(--bg-card); padding: 30px; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); height: fit-content; }
+        .profile-pic-placeholder { width: 100%; aspect-ratio: 1/1; background-color: var(--border); border-radius: 50%; margin-bottom: 20px; display: flex; align-items: center; justify-content: center; color: var(--text-light); font-size: 14px; overflow: hidden; }
+        .sidebar h1 { font-size: 24px; font-weight: 700; color: #0f172a; margin-bottom: 5px; line-height: 1.2; }
+        .sidebar h2 { font-size: 15px; font-weight: 500; color: var(--text-light); margin-bottom: 20px; }
+        
+        .nav-menu { display: flex; flex-direction: column; gap: 8px; margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px solid var(--border); }
+        .nav-menu a { display: block; padding: 10px 15px; background-color: var(--bg-body); color: var(--text-main); border-radius: 6px; font-weight: 600; text-decoration: none; }
+        .nav-menu a:hover { background-color: var(--accent); color: var(--primary); }
+        .nav-menu a.active { background-color: var(--primary); color: white; }
+        
+        .contact-info { list-style: none; font-size: 14px; margin-bottom: 20px; }
+        .contact-info li { margin-bottom: 10px; }
+        .links-flex { display: flex; gap: 15px; margin-bottom: 20px; }
+        .links-flex a { font-weight: 600; font-size: 14px; }
+        .notice { background-color: #fef2f2; color: #991b1b; padding: 12px; border-radius: 6px; font-size: 13px; font-weight: 500; text-align: center; border: 1px solid #fecaca; }
+
+        .main-content section { background: var(--bg-card); padding: 40px; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); margin-bottom: 30px; }
+        h3 { font-size: 20px; font-weight: 600; color: #0f172a; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 2px solid var(--accent); }
+        
+        .caveat-box { background-color: #f8fafc; border-left: 4px solid var(--primary); padding: 15px 20px; font-size: 14px; color: var(--text-main); margin-bottom: 30px; border-radius: 0 8px 8px 0; }
+        
+        /* Publication Specific Styles */
+        .pub-list { display: flex; flex-direction: column; gap: 25px; }
+        .pub-item { padding-bottom: 25px; border-bottom: 1px solid var(--border); }
+        .pub-item:last-child { border-bottom: none; padding-bottom: 0; }
+        
+        .pub-title { font-size: 17px; font-weight: 600; color: #0f172a; margin-bottom: 6px; line-height: 1.4; }
+        .pub-authors { font-size: 15px; margin-bottom: 6px; }
+        .pub-authors strong { color: var(--primary); font-weight: 600; }
+        .pub-venue { font-size: 14px; color: var(--text-light); font-weight: 500; }
+        .pub-venue span { display: inline-block; background: var(--bg-body); padding: 2px 8px; border-radius: 4px; border: 1px solid var(--border); margin-right: 8px; color: #0f172a; }
+
+        
+        .pub-title a {
+            color: #0f172a;
+            text-decoration: none;
+        }
+        .pub-title a:hover {
+            color: var(--primary);
+            text-decoration: underline;
+        }
+        .pub-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 8px;
+        }
+        .pub-links a {
+            display: inline-block;
+            background: var(--accent);
+            border: 1px solid var(--border);
+            border-radius: 999px;
+            padding: 2px 9px;
+            font-size: 13px;
+            font-weight: 600;
+            line-height: 1.4;
+        }
+
+        @media (max-width: 850px) { .container { grid-template-columns: 1fr; } }
+    </style>
 </head>
 <body>
-
-
-<!-- Navigation -->
-	<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
-	  <div class="container">
-		<div class="navbar-header">
-		  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-		</div>
-
-		<!-- Collect the nav links, forms, and other content for toggling -->
-		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-		  <ul class="nav navbar-nav">
-				  <li><a href="index.html">Home</a></li>
-				  <!-- <li><a href="#">Projects</a></li> -->
-				  <li><a href="publications.html">Publications</a></li> 
-				  <!-- <li><a href="#">CV</a></li>  -->
-		  </ul>
-		</div>
-	  </div>
-	</nav>
-  
-  <!-- Page Content -->
-    <div class="container">
-
-        <div class="row">
-
-            <!-- Entries Column -->
-            <div class="col-md-8" style="height: 100vh;">
-                
-
-                
-                <div style="margin-top:3%; text-align:justify;">                
-					<p>I am an associate professor in the <a href="https://www.birmingham.ac.uk/schools/computer-science" target="_blank" rel="noopener">School of Computer Science</a> at the <a href="https://www.birmingham.ac.uk/" target="_blank" rel="noopener">University of Birmingham</a>. I am primarily associated with the <a href="https://www.birmingham.ac.uk/research/activity/computer-science/theory-of-computation" target="_blank" rel="noopener">Theory of Computation</a> group. My research interest is in algorithms and complexity.</p>
-
-                     <p> In my previous avatar, I was a lecturer (Assistant professor in North American equivalence) in the <a href="https://www.sheffield.ac.uk/dcs" target="_blank" rel="noopener">Department of Computer Science</a> at the <a href="https://www.sheffield.ac.uk/" target="_blank" rel="noopener">University of Sheffield</a>, a post-doctoral researcher at the <a href="https://di.ku.dk/english/" target="_blank" rel="noopener">Department of Computer Science</a> in the <a href="https://www.ku.dk/english/" target="_blank" rel="noopener">University of Copenhagen</a> in 2021, at <a href="https://www.kth.se/en/csc" target="_blank" rel="noopener">KTH Royal Institute of Technology</a> during 2019-2021, a post-doctoral fellow at <a href="https://iuuk.mff.cuni.cz/" target="_blank" rel="noopener">IUUK, Charles University</a> in 2018, in the <a href="https://apc.csc.kth.se/" target="_blank" rel="noopener">APC group</a> at KTH Royal Institute of Technology during 2017-2018, and a graduate student in theoretical computer science at <a href="http://www.tcs.tifr.res.in/" target="_blank" rel="noopener">TIFR Mumbai</a> until August 2017, working under the guidance of <a href="http://www.tcs.tifr.res.in/~arkadev/" target="_blank" rel="noopener">Dr. Arkadev Chattopadhyay</a>.</p>
-                    
-                    <p>I am a recipient of the <a href="https://gow.epsrc.ukri.org/NGBOViewGrant.aspx?GrantRef=EP/X03805X/1" target="_blank" rel="noopener">UKRI New Investigator Award</a>. During my PhD, I was a recipient of TCS PhD Fellowship and my PhD research work was supported by this fellowship.</p>
-                </div>
-
-                <div>    
-                <h2 id="publications">Publications</h2>
-                
-                <!-- <strong>Conferences</strong><br/> -->
-                <p><i>Caveat:</i> In theoretical computer science (TCS), the most important publication venues are conferences, amongst which STOC, FOCS, SODA, CCC, ICALP are widely recognised as the most prestigious conferences worldwide. For journals, SICOMP and JACM are the most prestigious journals in the field. </p>
-
-                <ol>
-                <li class="paper" words="add, your, keywords, here"><a href="https://arxiv.org/abs/2508.20305">Directed and Undirected Vertex Connectivity Problems are Equivalent for Dense Graphs</a>.  Yonggang Jiang, Sagnik Mukhopadhyay, Sorrachai Yingchareonthawornchai <b> In SOSA 2026.</b></li>
-
-                <li class="paper" words="add, your, keywords, here"><a href="https://arxiv.org/abs/2502.08032">Shortcuts and Transitive-Closure Spanners Approximation</a>.  Parinya Chalermsook, Yonggang Jiang, Sagnik Mukhopadhyay, Danupon Nanongkai <b> In SODA 2026.</b></li>
-
-                <li class="paper" words="add, your, keywords, here"><a href="https://arxiv.org/abs/2503.20366">Global vs. s-t Vertex Connectivity Beyond Sequential: Almost-Perfect Reductions & Near-Optimal Separations</a>.  Joakim Blikstad, Yonggang Jiang, Sagnik Mukhopadhyay, Sorrachai Yingchareonthawornchai  <b> In STOC 2025.</b></li>
-
-                <li class="paper" words="add, your, keywords, here"><a href="https://arxiv.org/abs/2405.14835">Polynomial Pass Semi-Streaming Lower Bounds for K-Cores and Degeneracy</a>. Sepehr Assadi, Prantar Ghosh, Bruno Loff, Parth Mittal, Sagnik Mukhopadhyay <b> In CCC 2024.</b></li>
-            
-                <li class="paper" words="add, your, keywords, here"><a href="https://arxiv.org/abs/2302.11651">Finding a Small Vertex Cut on Distributed Networks</a>.  Yonggang Jiang, Sagnik Mukhopadhyay <b> In STOC 2023.</b></li>
-
-                <li class="paper" words="add, your, keywords, here"><a href="https://arxiv.org/abs/2302.09796">Fast Algorithms via Dynamic-Oracle Matroids</a>. Joakim Blikstad, Danupon Nanongkai, Ta-Wei Tu, Sagnik Mukhopadhyay <b> In STOC 2023.</b></li>
-
-                <li class="paper" words="add, your, keywords, here"><a href="https://arxiv.org/abs/2208.02526">Nearly Optimal Communication and Query Complexity of Bipartite Matching</a>. Joakim Blikstad, Jan van den Brand, Yuval Efron, Sagnik Mukhopadhyay, Danupon Nanongkai <b> In FOCS 2022.</b></li>
-
-                <li class="paper" words="add, your, keywords, here"><a href="https://arxiv.org/abs/2201.05674">Cut Query Algorithms with Star Contraction</a>. Simon Apers, Yuval Efron, Pawel Gawrychowski, Troy Lee, Sagnik Mukhopadhyay, Danupon Nanongkai<b> In FOCS 2022.</b></li>
-
-                <li class="paper" words="add, your, keywords, here"><a href="https://arxiv.org/abs/2011.08097">Faster Connectivity in Low-Rank Hypergraphs via Expander Decomposition</a>. SCalvin Beideman, Karthekeyan Chandrasekaran, Sagnik Mukhopadhyay, Danupon Nanongkai <b> In IPCO 2022.</b></li>
-
-                <li class="paper" words="add, your, keywords, here"><a href="https://arxiv.org/abs/2103.15724"> A Note on Isolating Cut Lemma for Submodular Function Minimization.</a>. Sagnik Mukhopadhyay, Danupon Nanongkai (2021)<b>.</b></li>
-
-                <li class="paper" words="add, your, keywords, here"><a href="https://arxiv.org/abs/2102.06565">Work-Optimal Parallel Minimum Cuts for Non-Sparse Graphs</a>. Andrés López-Martínez, Sagnik Mukhopadhyay, Danupon Nanongkai<b> In SPAA 2021.</b></li>
-
-                <li class="paper" words="add, your, keywords, here"><a href="https://arxiv.org/abs/2004.09129"> Distributed Weighted Min-Cut in Nearly-Optimal Time.</a>. Michal Dory, Yuval Efron, Sagnik Mukhopadhyay, Danupon Nanongkai<b> In STOC 2021.</b></li>
-
-                <li class="paper" words="add, your, keywords, here"><a href="https://arxiv.org/abs/2102.05548">Breaking the Quadratic Barrier for Matroid Intersection</a>. Joakim Blikstad, Jan van den Brand, Sagnik Mukhopadhyay, Danupon Nanongkai <b> In STOC 2021.</b></li>
-
-                <li class="paper" words="add, your, keywords, here"><a href="https://arxiv.org/abs/1911.01651">Weighted Min-Cut: Sequential, Cut-Query and Streaming Algorithms</a>. Sagnik Mukhopadhyay, Danupon Nanongkai<b> In STOC 2020.</b></li>
-
-                <li class="paper" words="add, your, keywords, here"><a href="https://link.springer.com/article/10.1007/s00037-019-00190-7">Simulation Theorems via Pseudo-random Properties</a>. Arkadev Chattopadhyay, Michal Koucký, Bruno Loff, Sagnik Mukhopadhyay<b> In Computational Complexity (28:4) 2019.</b></li>
-
-                <li class="paper" words="add, your, keywords, here"><a href="https://eccc.weizmann.ac.il/report/2018/175/">Lifting Theorems for Equality</a>. Bruno Loff, Sagnik Mukhopadhyay<b> In STACS 2019.</b></li>
-
-                <li class="paper" words="add, your, keywords, here"><a href="https://eccc.weizmann.ac.il/report/2017/170/">Simulation Beats Richness: New Data-Structure Lower Bounds</a>. Arkadev Chattopadhyay, Michal Koucký, Bruno Loff, Sagnik Mukhopadhyay<b> In STOC 2018.</b></li>
-
-                <li class="paper" words="add, your, keywords, here"><a href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol066-stacs2017/LIPIcs.STACS.2017.21/LIPIcs.STACS.2017.21.pdf">Lower Bounds for Elimination via Weak Regularity</a>. Arkadev Chattopadhyay, Michal Koucký, Bruno Loff, Sagnik Mukhopadhyay<b> In STACS 2017.</b></li>
-
-                <li class="paper" words="add, your, keywords, here"><a href="https://epubs.siam.org/doi/10.1137/17M1124115">Separation between Deterministic and Randomized Query Complexity</a>. Sagnik Mukhopadhyay, Swagato Sanyal, Jaikumar Radhakrishnan <b> In SICOMP (47:4).</b></li>
-
-                <li class="paper" words="add, your, keywords, here"><a href="https://arxiv.org/abs/1602.06079">Tribes is Hard in Message-passing Model</a>. Arkadev Chattopadhyay, Sagnik Mukhopadhyay<b> In STACS 2015.</b></li>
-
-                <li class="paper" words="add, your, keywords, here"><a href="https://arxiv.org/abs/1506.06399">Towards Better Separation between Deterministic and Randomized Query Complexity</a>. Sagnik Mukhopadhyay, Swagato Sanyal <b> In FSTTCS 2015.</b></li>
-                </ol>
-                </div>
-            </div> 
-
-            <!-- Contact Info on the Sidebar -->
-            <!-- Main Image -->
-            <div class="col-md-3">
-                <img class="img-responsive" src="./img/avatar.jpg" alt=""><br>
-            </div>
-
-            <div class="col-md-4">
-                <div style="font-family: 'Oswald', sans-serif; font-size: 32px;"><b>Sagnik Mukhopadhyay</b></div><br>
-                <p><b>[first letter first name].[surname]@bham.ac.uk</b><br>
-                <p>Associate Professor in Computer Science<br>
-                    <a href="https://www.birmingham.ac.uk/schools/computer-science" target="_blank" rel="noopener">School of Computer Science</a><br>
-                <a href="https://www.birmingham.ac.uk/" target="_blank" rel="noopener">University of Birmingham</a><br>
-                United Kingdom<br>
-                </p>
-            </div>
-            
-            
-            <!-- Links on the Sidebar -->
-            <div class="col-md-4" style="margin-top:2%">
-              <dd><a href="https://scholar.google.se/citations?user=9JQnLLoAAAAJ&hl=en" target="_blank" class="ai ai-google-scholar-square"> Google Scholar</a></dd> 
-              <dd><a href="https://dblp.org/pid/159/6668.html" target="_blank" class="ai ai-dblp"> DBLP</a></dd>
-            </div>
-            
-            
-            <!-- Bottom padding -->
-            <div class="col-md-8" style="height: 10vh;"> </div>
-
-            
+<div class="container">
+<!-- Sidebar -->
+<aside class="sidebar">
+<div class="profile-pic-placeholder">
+            [Add Photo URL]
         </div>
-
-
-    </div>
-
-    <!-- /.container -->
-    
-    <!-- Other people may like it too! -->
-    <a style="color:#b5bec9;font-size:0.8em; float:right;" href="https://github.com/mavroudisv/plain-academic">Plain Academic</a> 
-    
+<h1>Sagnik Mukhopadhyay</h1>
+<h2>Associate Professor</h2>
+<!-- Navigation Menu (Publications is active) -->
+<nav class="nav-menu">
+<a href="index.html">Home</a>
+<a class="active" href="publications.html">Publications</a>
+</nav>
+<ul class="contact-info">
+<li><strong>School of Computer Science</strong><br/>University of Birmingham<br/>United Kingdom</li>
+<li><strong>Email:</strong><br/><a href="mailto:s.mukhopadhyay@bham.ac.uk">s.mukhopadhyay@bham.ac.uk</a></li>
+</ul>
+<div class="links-flex">
+<a href="https://scholar.google.co.in/citations?user=cT2hKCQAAAAJ" target="_blank">Google Scholar</a>
+<a href="https://dblp.org/pid/159/6668.html" rel="noopener noreferrer" target="_blank">DBLP</a>
+</div>
+<div class="notice">
+            Please note: I am not currently accepting interns.
+        </div>
+</aside>
+<!-- Main Content -->
+<main class="main-content">
+<section>
+<h3>Publications</h3>
+<div class="caveat-box">
+<strong>Caveat:</strong> In theoretical computer science (TCS), the most important publication venues are conferences, amongst which STOC, FOCS, SODA, CCC, and ICALP are widely recognised as the most prestigious worldwide. For journals, SICOMP and JACM are the most prestigious in the field.
+            </div>
+<div class="pub-list">
+<!-- 2026 -->
+<div class="pub-item">
+<div class="pub-title"><a href="https://arxiv.org/abs/2508.20305" rel="noopener noreferrer" target="_blank">Directed and Undirected Vertex Connectivity Problems are Equivalent for Dense Graphs</a></div>
+<div class="pub-authors">Yonggang Jiang, <strong>Sagnik Mukhopadhyay</strong>, Sorrachai Yingchareonthawornchai</div>
+<div class="pub-venue"><span>SOSA 2026</span></div><div class="pub-links"><a href="https://arxiv.org/abs/2508.20305" rel="noopener noreferrer" target="_blank">arXiv</a><a href="https://dblp.org/rec/conf/sosa/FischerJMY26" rel="noopener noreferrer" target="_blank">DBLP</a></div>
+</div>
+<div class="pub-item">
+<div class="pub-title"><a href="https://arxiv.org/abs/2502.08032" rel="noopener noreferrer" target="_blank">Shortcuts and Transitive-Closure Spanners Approximation</a></div>
+<div class="pub-authors">Parinya Chalermsook, Yonggang Jiang, <strong>Sagnik Mukhopadhyay</strong>, Danupon Nanongkai</div>
+<div class="pub-venue"><span>SODA 2026</span></div><div class="pub-links"><a href="https://arxiv.org/abs/2502.08032" rel="noopener noreferrer" target="_blank">arXiv</a><a href="https://dblp.org/rec/conf/soda/ChalermsookJMN26" rel="noopener noreferrer" target="_blank">DBLP</a></div>
+</div>
+<!-- 2025 -->
+<div class="pub-item">
+<div class="pub-title"><a href="https://arxiv.org/abs/2503.20366" rel="noopener noreferrer" target="_blank">Global vs. s-t Vertex Connectivity Beyond Sequential: Almost-Perfect Reductions &amp; Near-Optimal Separations</a></div>
+<div class="pub-authors">Joakim Blikstad, Yonggang Jiang, <strong>Sagnik Mukhopadhyay</strong>, Sorrachai Yingchareonthawornchai</div>
+<div class="pub-venue"><span>STOC 2025</span></div><div class="pub-links"><a href="https://arxiv.org/abs/2503.20366" rel="noopener noreferrer" target="_blank">arXiv</a><a href="https://dblp.org/rec/conf/stoc/BlikstadJMY25" rel="noopener noreferrer" target="_blank">DBLP</a></div>
+</div>
+<!-- 2024 -->
+<div class="pub-item">
+<div class="pub-title"><a href="https://arxiv.org/abs/2405.14835" rel="noopener noreferrer" target="_blank">Polynomial Pass Semi-Streaming Lower Bounds for K-Cores and Degeneracy</a></div>
+<div class="pub-authors">Sepehr Assadi, Prantar Ghosh, Bruno Loff, Parth Mittal, <strong>Sagnik Mukhopadhyay</strong></div>
+<div class="pub-venue"><span>CCC 2024</span></div><div class="pub-links"><a href="https://arxiv.org/abs/2405.14835" rel="noopener noreferrer" target="_blank">arXiv</a><a href="https://dblp.org/rec/conf/coco/AssadiGLMM24" rel="noopener noreferrer" target="_blank">DBLP</a></div>
+</div>
+<!-- 2023 -->
+<div class="pub-item">
+<div class="pub-title"><a href="https://arxiv.org/abs/2302.11651" rel="noopener noreferrer" target="_blank">Finding a Small Vertex Cut on Distributed Networks</a></div>
+<div class="pub-authors">Yonggang Jiang, <strong>Sagnik Mukhopadhyay</strong></div>
+<div class="pub-venue"><span>STOC 2023</span></div><div class="pub-links"><a href="https://arxiv.org/abs/2302.11651" rel="noopener noreferrer" target="_blank">arXiv</a><a href="https://dblp.org/rec/conf/stoc/JiangM23" rel="noopener noreferrer" target="_blank">DBLP</a></div>
+</div>
+<div class="pub-item">
+<div class="pub-title"><a href="https://arxiv.org/abs/2302.09796" rel="noopener noreferrer" target="_blank">Fast Algorithms via Dynamic-Oracle Matroids</a></div>
+<div class="pub-authors">Joakim Blikstad, Danupon Nanongkai, Ta-Wei Tu, <strong>Sagnik Mukhopadhyay</strong></div>
+<div class="pub-venue"><span>STOC 2023</span></div><div class="pub-links"><a href="https://arxiv.org/abs/2302.09796" rel="noopener noreferrer" target="_blank">arXiv</a><a href="https://dblp.org/rec/conf/stoc/BlikstadMNT23" rel="noopener noreferrer" target="_blank">DBLP</a></div>
+</div>
+<!-- 2022 -->
+<div class="pub-item">
+<div class="pub-title"><a href="https://arxiv.org/abs/2208.02526" rel="noopener noreferrer" target="_blank">Nearly Optimal Communication and Query Complexity of Bipartite Matching</a></div>
+<div class="pub-authors">Joakim Blikstad, Jan van den Brand, Yuval Efron, <strong>Sagnik Mukhopadhyay</strong>, Danupon Nanongkai</div>
+<div class="pub-venue"><span>FOCS 2022</span></div><div class="pub-links"><a href="https://arxiv.org/abs/2208.02526" rel="noopener noreferrer" target="_blank">arXiv</a><a href="https://dblp.org/rec/conf/focs/BlikstadBEMN22" rel="noopener noreferrer" target="_blank">DBLP</a></div>
+</div>
+<div class="pub-item">
+<div class="pub-title"><a href="https://arxiv.org/abs/2201.05674" rel="noopener noreferrer" target="_blank">Cut Query Algorithms with Star Contraction</a></div>
+<div class="pub-authors">Simon Apers, Yuval Efron, Pawel Gawrychowski, Troy Lee, <strong>Sagnik Mukhopadhyay</strong>, Danupon Nanongkai</div>
+<div class="pub-venue"><span>FOCS 2022</span></div><div class="pub-links"><a href="https://arxiv.org/abs/2201.05674" rel="noopener noreferrer" target="_blank">arXiv</a><a href="https://dblp.org/rec/conf/focs/ApersEGLMN22" rel="noopener noreferrer" target="_blank">DBLP</a></div>
+</div>
+<div class="pub-item">
+<div class="pub-title"><a href="https://arxiv.org/abs/2011.08097" rel="noopener noreferrer" target="_blank">Faster Connectivity in Low-Rank Hypergraphs via Expander Decomposition</a></div>
+<div class="pub-authors">Calvin Beideman, Karthekeyan Chandrasekaran, <strong>Sagnik Mukhopadhyay</strong>, Danupon Nanongkai</div>
+<div class="pub-venue"><span>IPCO 2022</span></div><div class="pub-links"><a href="https://arxiv.org/abs/2011.08097" rel="noopener noreferrer" target="_blank">arXiv</a><a href="https://dblp.org/rec/conf/ipco/BeidemanCMN22" rel="noopener noreferrer" target="_blank">DBLP</a></div>
+</div>
+<!-- 2021 -->
+<div class="pub-item">
+<div class="pub-title"><a href="https://arxiv.org/abs/2103.15724" rel="noopener noreferrer" target="_blank">A Note on Isolating Cut Lemma for Submodular Function Minimization</a></div>
+<div class="pub-authors"><strong>Sagnik Mukhopadhyay</strong>, Danupon Nanongkai</div>
+<div class="pub-venue"><span>Preprint (2021)</span></div><div class="pub-links"><a href="https://arxiv.org/abs/2103.15724" rel="noopener noreferrer" target="_blank">arXiv</a><a href="https://dblp.org/rec/journals/corr/abs-2103-15724" rel="noopener noreferrer" target="_blank">DBLP</a></div>
+</div>
+<div class="pub-item">
+<div class="pub-title"><a href="https://arxiv.org/abs/2102.06565" rel="noopener noreferrer" target="_blank">Work-Optimal Parallel Minimum Cuts for Non-Sparse Graphs</a></div>
+<div class="pub-authors">Andrés López-Martínez, <strong>Sagnik Mukhopadhyay</strong>, Danupon Nanongkai</div>
+<div class="pub-venue"><span>SPAA 2021</span></div><div class="pub-links"><a href="https://arxiv.org/abs/2102.06565" rel="noopener noreferrer" target="_blank">arXiv</a><a href="https://dblp.org/rec/conf/spaa/Lopez-MartinezM21" rel="noopener noreferrer" target="_blank">DBLP</a></div>
+</div>
+<div class="pub-item">
+<div class="pub-title"><a href="https://arxiv.org/abs/2004.09129" rel="noopener noreferrer" target="_blank">Distributed Weighted Min-Cut in Nearly-Optimal Time</a></div>
+<div class="pub-authors">Michal Dory, Yuval Efron, <strong>Sagnik Mukhopadhyay</strong>, Danupon Nanongkai</div>
+<div class="pub-venue"><span>STOC 2021</span></div><div class="pub-links"><a href="https://arxiv.org/abs/2004.09129" rel="noopener noreferrer" target="_blank">arXiv</a><a href="https://dblp.org/rec/conf/stoc/DoryEMN21" rel="noopener noreferrer" target="_blank">DBLP</a></div>
+</div>
+<div class="pub-item">
+<div class="pub-title"><a href="https://arxiv.org/abs/2102.05548" rel="noopener noreferrer" target="_blank">Breaking the Quadratic Barrier for Matroid Intersection</a></div>
+<div class="pub-authors">Joakim Blikstad, Jan van den Brand, <strong>Sagnik Mukhopadhyay</strong>, Danupon Nanongkai</div>
+<div class="pub-venue"><span>STOC 2021</span></div><div class="pub-links"><a href="https://arxiv.org/abs/2102.05548" rel="noopener noreferrer" target="_blank">arXiv</a><a href="https://dblp.org/rec/conf/stoc/BlikstadBMN21" rel="noopener noreferrer" target="_blank">DBLP</a></div>
+</div>
+<!-- 2020 & Older -->
+<div class="pub-item">
+<div class="pub-title"><a href="https://arxiv.org/abs/1911.01651" rel="noopener noreferrer" target="_blank">Weighted Min-Cut: Sequential, Cut-Query and Streaming Algorithms</a></div>
+<div class="pub-authors"><strong>Sagnik Mukhopadhyay</strong>, Danupon Nanongkai</div>
+<div class="pub-venue"><span>STOC 2020</span></div><div class="pub-links"><a href="https://arxiv.org/abs/1911.01651" rel="noopener noreferrer" target="_blank">arXiv</a><a href="https://dblp.org/rec/conf/stoc/MukhopadhyayN20" rel="noopener noreferrer" target="_blank">DBLP</a></div>
+</div>
+<div class="pub-item">
+<div class="pub-title"><a href="https://arxiv.org/abs/1704.06807" rel="noopener noreferrer" target="_blank">Simulation Theorems via Pseudo-random Properties</a></div>
+<div class="pub-authors">Arkadev Chattopadhyay, Michal Koucký, Bruno Loff, <strong>Sagnik Mukhopadhyay</strong></div>
+<div class="pub-venue"><span>Computational Complexity (28:4) 2019</span></div><div class="pub-links"><a href="https://arxiv.org/abs/1704.06807" rel="noopener noreferrer" target="_blank">arXiv</a><a href="https://eccc.weizmann.ac.il/report/2017/014/" rel="noopener noreferrer" target="_blank">ECCC</a><a href="https://dblp.org/rec/journals/cc/ChattopadhyayKL19" rel="noopener noreferrer" target="_blank">DBLP</a></div>
+</div>
+<div class="pub-item">
+<div class="pub-title"><a href="https://eccc.weizmann.ac.il/report/2018/175/" rel="noopener noreferrer" target="_blank">Lifting Theorems for Equality</a></div>
+<div class="pub-authors">Bruno Loff, <strong>Sagnik Mukhopadhyay</strong></div>
+<div class="pub-venue"><span>STACS 2019</span></div><div class="pub-links"><a href="https://eccc.weizmann.ac.il/report/2018/175/" rel="noopener noreferrer" target="_blank">ECCC</a><a href="https://dblp.org/rec/conf/stacs/LoffM19" rel="noopener noreferrer" target="_blank">DBLP</a></div>
+</div>
+<div class="pub-item">
+<div class="pub-title"><a href="https://eccc.weizmann.ac.il/report/2017/170/" rel="noopener noreferrer" target="_blank">Simulation Beats Richness: New Data-Structure Lower Bounds</a></div>
+<div class="pub-authors">Arkadev Chattopadhyay, Michal Koucký, Bruno Loff, <strong>Sagnik Mukhopadhyay</strong></div>
+<div class="pub-venue"><span>STOC 2018</span></div><div class="pub-links"><a href="https://eccc.weizmann.ac.il/report/2017/170/" rel="noopener noreferrer" target="_blank">ECCC</a><a href="https://dblp.org/rec/conf/stoc/ChattopadhyayKL18" rel="noopener noreferrer" target="_blank">DBLP</a></div>
+</div>
+<div class="pub-item">
+<div class="pub-title"><a href="https://eccc.weizmann.ac.il/report/2016/165/" rel="noopener noreferrer" target="_blank">Lower Bounds for Elimination via Weak Regularity</a></div>
+<div class="pub-authors">Arkadev Chattopadhyay, Michal Koucký, Bruno Loff, <strong>Sagnik Mukhopadhyay</strong></div>
+<div class="pub-venue"><span>STACS 2017</span></div><div class="pub-links"><a href="https://eccc.weizmann.ac.il/report/2016/165/" rel="noopener noreferrer" target="_blank">ECCC</a><a href="https://dblp.org/rec/conf/stacs/ChattopadhyayDK17" rel="noopener noreferrer" target="_blank">DBLP</a></div>
+</div>
+<div class="pub-item">
+<div class="pub-title"><a href="https://doi.org/10.1137/17M1124115" rel="noopener noreferrer" target="_blank">Separation between Deterministic and Randomized Query Complexity</a></div>
+<div class="pub-authors"><strong>Sagnik Mukhopadhyay</strong>, Swagato Sanyal, Jaikumar Radhakrishnan</div>
+<div class="pub-venue"><span>SICOMP (47:4)</span></div><div class="pub-links"><a href="https://doi.org/10.1137/17M1124115" rel="noopener noreferrer" target="_blank">DOI</a><a href="https://dblp.org/rec/journals/siamcomp/MukhopadhyayRS18" rel="noopener noreferrer" target="_blank">DBLP</a></div>
+</div>
+<div class="pub-item">
+<div class="pub-title"><a href="https://arxiv.org/abs/1602.06079" rel="noopener noreferrer" target="_blank">Tribes is Hard in Message-passing Model</a></div>
+<div class="pub-authors">Arkadev Chattopadhyay, <strong>Sagnik Mukhopadhyay</strong></div>
+<div class="pub-venue"><span>STACS 2015</span></div><div class="pub-links"><a href="https://arxiv.org/abs/1602.06079" rel="noopener noreferrer" target="_blank">arXiv</a><a href="https://eccc.weizmann.ac.il/report/2016/027/" rel="noopener noreferrer" target="_blank">ECCC</a><a href="https://dblp.org/rec/conf/stacs/ChattopadhyayM15" rel="noopener noreferrer" target="_blank">DBLP</a></div>
+</div>
+<div class="pub-item">
+<div class="pub-title"><a href="https://arxiv.org/abs/1506.06399" rel="noopener noreferrer" target="_blank">Towards Better Separation between Deterministic and Randomized Query Complexity</a></div>
+<div class="pub-authors"><strong>Sagnik Mukhopadhyay</strong>, Swagato Sanyal</div>
+<div class="pub-venue"><span>FSTTCS 2015</span></div><div class="pub-links"><a href="https://arxiv.org/abs/1506.06399" rel="noopener noreferrer" target="_blank">arXiv</a><a href="https://eccc.weizmann.ac.il/report/2015/107/" rel="noopener noreferrer" target="_blank">ECCC</a><a href="https://dblp.org/rec/conf/fsttcs/MukhopadhyayS15" rel="noopener noreferrer" target="_blank">DBLP</a></div>
+</div>
+</div>
+</section>
+</main>
+</div>
 </body>
-
 </html>
