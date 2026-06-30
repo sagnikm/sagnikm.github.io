@@ -1,131 +1,252 @@
 <!DOCTYPE html>
-<!--
-    Plain-Academic by Vasilios Mavroudis
-    Released under the Simplified BSD License/FreeBSD (2-clause) License.
-    https://github.com/mavroudisv/plain-academic
--->
 
 <html lang="en">
 <head>
-  <title>Sagnik Mukhopadhyay</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-  <link href='https://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="./font-awesome/css/font-awesome.min.css">
-  <link rel="stylesheet" href="./academicons/css/academicons.min.css"/>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sagnik Mukhopadhyay | University of Birmingham</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<style>
+        :root {
+            --primary: #1e3a8a; /* Deep academic blue */
+            --text-main: #334155;
+            --text-light: #64748b;
+            --bg-body: #f8fafc;
+            --bg-card: #ffffff;
+            --accent: #eff6ff;
+            --border: #e2e8f0;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-main);
+            background-color: var(--bg-body);
+            line-height: 1.7;
+            font-size: 16px;
+        }
+
+        a { color: var(--primary); text-decoration: none; transition: all 0.2s ease; }
+        a:hover { color: #1e40af; text-decoration: underline; }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 50px;
+        }
+
+        /* Sidebar Styles */
+        .sidebar {
+            background: var(--bg-card);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            height: fit-content;
+        }
+
+        .profile-pic-placeholder {
+            width: 100%;
+            aspect-ratio: 1/1;
+            background-color: var(--border);
+            border-radius: 50%;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-light);
+            font-size: 14px;
+            overflow: hidden;
+        }
+
+        .sidebar h1 {
+            font-size: 24px;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 5px;
+            line-height: 1.2;
+        }
+
+        .sidebar h2 {
+            font-size: 15px;
+            font-weight: 500;
+            color: var(--text-light);
+            margin-bottom: 20px;
+        }
+
+        /* Navigation Menu */
+        .nav-menu {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        .nav-menu a {
+            display: block;
+            padding: 10px 15px;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            border-radius: 6px;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .nav-menu a:hover {
+            background-color: var(--accent);
+            color: var(--primary);
+        }
+
+        .nav-menu a.active {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        .contact-info { list-style: none; font-size: 14px; margin-bottom: 20px; }
+        .contact-info li { margin-bottom: 10px; }
+        
+        .links-flex { display: flex; gap: 15px; margin-bottom: 20px; }
+        .links-flex a { font-weight: 600; font-size: 14px; }
+
+        .notice {
+            background-color: #fef2f2;
+            color: #991b1b;
+            padding: 12px;
+            border-radius: 6px;
+            font-size: 13px;
+            font-weight: 500;
+            text-align: center;
+            border: 1px solid #fecaca;
+        }
+
+        /* Main Content Styles */
+        .main-content section {
+            background: var(--bg-card);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            margin-bottom: 30px;
+        }
+
+        h3 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #0f172a;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--accent);
+        }
+
+        p { margin-bottom: 15px; }
+
+        ul.styled-list { list-style: none; }
+        ul.styled-list li { position: relative; padding-left: 20px; margin-bottom: 12px; }
+        ul.styled-list li::before {
+            content: "→"; position: absolute; left: 0; color: var(--primary); font-weight: bold;
+        }
+
+        .news-date {
+            font-weight: 600;
+            color: var(--primary);
+            font-size: 14px;
+            margin-right: 8px;
+            background: var(--accent);
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+
+        .team-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        .team-member {
+            background: var(--bg-body);
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+        }
+        .team-member strong { display: block; color: #0f172a; }
+        .team-member span { font-size: 14px; color: var(--text-light); display: block; }
+
+
+        .sidebar h1 a { color: #0f172a; text-decoration: none; }
+        .sidebar h1 a:hover { color: var(--primary); text-decoration: underline; }
+        .team-member strong a { color: #0f172a; }
+
+        /* Responsive */
+        @media (max-width: 850px) {
+            .container { grid-template-columns: 1fr; }
+            .team-grid { grid-template-columns: 1fr; }
+        }
+    </style>
 </head>
 <body>
-
-
-<!-- Navigation -->
-	<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
-	  <div class="container">
-		<div class="navbar-header">
-		  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-		</div>
-
-		<!-- Collect the nav links, forms, and other content for toggling -->
-		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-		  <ul class="nav navbar-nav">
-				  <li><a href="index.html">Home</a></li>
-				  <!-- <li><a href="#">Projects</a></li> -->
-				  <li><a href="./publications.html">Publications</a></li> 
-				  <li><a href="./workshop-stoc.html">STOC 2026 Workshop</a></li>
-		  </ul>
-		</div>
-	  </div>
-	</nav>
-  
-  <!-- Page Content -->
-    <div class="container">
-
-        <div class="row">
-
-            <!-- Entries Column -->
-            <div class="col-md-8" style="height: 100vh;">
-                
-
-                
-                <div style="margin-top:3%; text-align:justify;">                
-					<p>I am an associate professor in the <a href="https://www.birmingham.ac.uk/schools/computer-science" target="_blank" rel="noopener">School of Computer Science</a> at the <a href="https://www.birmingham.ac.uk/" target="_blank" rel="noopener">University of Birmingham</a>. I am primarily associated with the <a href="https://www.birmingham.ac.uk/research/activity/computer-science/theory-of-computation" target="_blank" rel="noopener">Theory of Computation</a> group. My research interest is in algorithms and complexity.</p>
-
-                     <p> In my previous avatar, I was a lecturer (Assistant professor in North American equivalence) in the <a href="https://www.sheffield.ac.uk/dcs" target="_blank" rel="noopener">Department of Computer Science</a> at the <a href="https://www.sheffield.ac.uk/" target="_blank" rel="noopener">University of Sheffield</a>, a post-doctoral researcher at the <a href="https://di.ku.dk/english/" target="_blank" rel="noopener">Department of Computer Science</a> in the <a href="https://www.ku.dk/english/" target="_blank" rel="noopener">University of Copenhagen</a> in 2021, at <a href="https://www.kth.se/en/csc" target="_blank" rel="noopener">KTH Royal Institute of Technology</a> during 2019-2021, a post-doctoral fellow at <a href="https://iuuk.mff.cuni.cz/" target="_blank" rel="noopener">IUUK, Charles University</a> in 2018, in the <a href="https://apc.csc.kth.se/" target="_blank" rel="noopener">APC group</a> at KTH Royal Institute of Technology during 2017-2018, and a graduate student in theoretical computer science at <a href="http://www.tcs.tifr.res.in/" target="_blank" rel="noopener">TIFR Mumbai</a> until August 2017, working under the guidance of <a href="http://www.tcs.tifr.res.in/~arkadev/" target="_blank" rel="noopener">Dr. Arkadev Chattopadhyay</a>.</p>
-					
-					<p>I am a recipient of the <a href="https://gow.epsrc.ukri.org/NGBOViewGrant.aspx?GrantRef=EP/X03805X/1" target="_blank" rel="noopener">UKRI New Investigator Award</a>. During my PhD, I was a recipient of TCS PhD Fellowship and my PhD research work was supported by this fellowship.</p>
-              </div>
-
-                <div>
-            <h2 style="font-family: Philosopher, sans-serif;">Current team members</h2>
-
-                <ul>
-                  <li><b>PhD:</b> Shravan Mehra (2024 - present), <a href="https://yonggangjiang.github.io/" target="_blank" rel="noopener">Yonggang Jiang</a> (2022 - present)</li>
-                  <li><b>Postdoc:</b> <a href="https://vihanshah72.github.io/" target="_blank" rel="noopener">Vihan Shah</a> (2025 - present)</li>
-                </ul>
-                </div>
-
-                <div>
-            <h2 style="font-family: Philosopher, sans-serif;">Highlights</h2>
-
-                <ul>
-			<li> Together with <a href="https://www.cs.dartmouth.edu/~deepc/" target="_blank" rel="noopener">Deeparnab Chakrabarty</a>, I am organising a workshop at STOC 2026 called <a href="https://sagnikm.github.io/workshop-stoc.html" target="_blank" rel="noopener">Algorithmic Frontiers of Graph and Hypergraph Problems via Global Queries</a>. We have a fantastic set of speakers.</li>
-            <li><b>[Team news!]</b><a href="https://vihanshah72.github.io/" target="_blank" rel="noopener">Vihan Shah</a> has won the prestigious <a href="https://marie-sklodowska-curie-actions.ec.europa.eu/actions/postdoctoral-fellowships" target="_blank" rel="noopener">Marie Curie Postdoctoral Fellowship</a>.</li>
-            <li><b>[New!]</b>I will be serving as a PC member for ESA 2026, ICALP 2026 and FOCS 2026.</li>
-            <li><b>[New!]</b> New paper accepted in SODA and SOSA 2026. Check the publication section.</li>
-            <!---li> Together with <a href="https://www.csa.iisc.ac.in/~arindamkhan/" target="_blank" rel="noopener">Arindam Khan</a>, <a href="https://www.csa.iisc.ac.in/~barman/" target="_blank" rel="noopener">Siddharth Barman</a>, <a href="https://www.csa.iisc.ac.in/~anandl/" target="_blank" rel="noopener">Anand Lewis</a> and <a href="https://sites.google.com/site/thsaranurak/" target="_blank" rel="noopener">Thatchaphol Saranurak</a>, I have organised a workshop at IISc Bengaluru called <a href="https://algo.csa.iisc.ac.in/graphworkshop/index.html" target="_blank" rel="noopener">Frontiers of Graph Algorithms</a>. We have a fantastic set of speakers. <a href="https://www.youtube.com/playlist?list=PLmx4utxjUQD4V6coxKDLTS6IqJIbs5d2M" target="_blank" rel="noopener">Here</a> are the recorded videos.</li--->
-            <!---li><b>[Ongoing]</b> I am looking for a motivated PhD student. Start date is flexible. Contact me if you have read my papers and are interested in my research area.</li--->
-            <li><b>[Pinned!]</b> I am not accepting any interns.</li>
-            <li><b>[Pinned]</b> Along with <a href="https://web.mat.bham.ac.uk/S.A.Lo/" target="_blank" rel="noopener">Allan Lo</a>, I organise a monthly TCS + Combinatorics seminar series. More details <a href="https://researchseminars.org/seminar/TCSCombBham" target="_blank" rel="noopener">here</a>. Upcoming talks: </li>
-            <div class="embeddable_schedule" shortname="TCSCombBham" daterange="future"></div>
-<script src="https://researchseminars.org/embed_seminars.js" onload="seminarEmbedder.initialize({'addCSS': true});"></script>
-                </ul>
-
-            </div>
-            </div> 
-
-            <!-- Contact Info on the Sidebar -->
-            <!-- Main Image -->
-            <div class="col-md-3">
-                <img class="img-responsive" src="./img/avatar.jpg" alt=""><br>
-            </div>
-
-            <div class="col-md-4">
-                <div style="font-family: 'Oswald', sans-serif; font-size: 32px;"><b>Sagnik Mukhopadhyay</b></div><br>
-                <p><b>[first letter of first name].[surname]@bham.ac.uk</b><br>
-                <p>Associate Professor in Computer Science<br>
-                    <a href="https://www.birmingham.ac.uk/schools/computer-science" target="_blank" rel="noopener">School of Computer Science</a><br>
-                <a href="https://www.birmingham.ac.uk/" target="_blank" rel="noopener">University of Birmingham</a><br>
-                United Kingdom<br>
-                </p>
-            </div>
-            
-            
-            <!-- Links on the Sidebar -->
-            <div class="col-md-4" style="margin-top:2%">
-              <dd><a href="https://scholar.google.se/citations?user=9JQnLLoAAAAJ&hl=en" target="_blank" class="ai ai-google-scholar-square"> Google Scholar</a></dd> 
-              <dd><a href="https://dblp.org/pid/159/6668.html" target="_blank" class="ai ai-dblp"> DBLP</a></dd>
-            </div>
-            
-            
-            <!-- Publications -->
-
-            
+<div class="container">
+<!-- Sidebar -->
+<aside class="sidebar">
+<div class="profile-pic-placeholder">
+            <img src="./img/avatar.jpg" alt="Sagnik Mukhopadhyay">
         </div>
-
-
-    </div>
-    <!-- /.container -->
-    
-    <!-- Other people may like it too! -->
-    <a style="color:#b5bec9;font-size:0.8em; float:right;" href="https://github.com/mavroudisv/plain-academic">Plain Academic</a> 
-    
+<h1><a href="https://www.birmingham.ac.uk/staff/profiles/computer-science/academic-staff/mukhopadhyay-sagnik" rel="noopener noreferrer" target="_blank">Sagnik Mukhopadhyay</a></h1>
+<h2>Associate Professor</h2>
+<!-- Navigation Menu -->
+<nav class="nav-menu">
+<a class="active" href="index.html">Home</a>
+<a href="publications.html">Publications</a>
+<a href="./workshop-stoc.html">STOC 2026 Workshop</a>
+</nav>
+<ul class="contact-info">
+<li><strong><a href="https://www.birmingham.ac.uk/about/college-of-engineering-and-physical-sciences/computer-science" rel="noopener noreferrer" target="_blank">School of Computer Science</a></strong><br/><a href="https://www.birmingham.ac.uk/" rel="noopener noreferrer" target="_blank">University of Birmingham</a><br/>United Kingdom</li>
+<li><strong>Email:</strong><br/><a href="mailto:s.mukhopadhyay@bham.ac.uk">s.mukhopadhyay@bham.ac.uk</a></li>
+</ul>
+<div class="links-flex">
+<a href="https://scholar.google.com/citations?hl=en&amp;user=9JQnLLoAAAAJ" rel="noopener noreferrer" target="_blank">Google Scholar</a>
+<a href="https://dblp.org/pid/159/6668.html" rel="noopener noreferrer" target="_blank">DBLP</a>
+</div>
+<div class="notice">
+            Please note: I am not currently accepting interns.
+        </div>
+</aside>
+<!-- Main Content -->
+<main class="main-content">
+<section>
+<h3>About Me</h3>
+<p>I am an Associate Professor in the <a href="https://www.birmingham.ac.uk/about/college-of-engineering-and-physical-sciences/computer-science" rel="noopener noreferrer" target="_blank">School of Computer Science</a> at the <a href="https://www.birmingham.ac.uk/" rel="noopener noreferrer" target="_blank">University of Birmingham</a>, where I am primarily associated with the <a href="https://www.birmingham.ac.uk/research/centres-institutes/research-in-computer-science/theory-of-computation" rel="noopener noreferrer" target="_blank">Theory of Computation group</a>. My research focuses on algorithms and computational complexity.</p>
+<p>Specifically, my work is driven by sublinear-time algorithms, communication complexity, and query complexity for large-scale network analysis. I am actively engaged in graph-theoretic research, with a particular emphasis on fundamental structures such as maximum matching, minimum cut, and vertex connectivity.</p>
+<p>Previously, I held a lectureship at the <a href="https://www.sheffield.ac.uk/" rel="noopener noreferrer" target="_blank">University of Sheffield</a>. I have also worked as a post-doctoral researcher at the <a href="https://www.ku.dk/english/" rel="noopener noreferrer" target="_blank">University of Copenhagen</a>, <a href="https://www.kth.se/en" rel="noopener noreferrer" target="_blank">KTH Royal Institute of Technology</a>, and <a href="https://www.mff.cuni.cz/en/iuuk" rel="noopener noreferrer" target="_blank">IUUK at Charles University</a>. I completed my PhD in theoretical computer science at <a href="https://www.tcs.tifr.res.in/" rel="noopener noreferrer" target="_blank">TIFR Mumbai</a> under the guidance of <a href="https://www.tcs.tifr.res.in/~arkadev/" rel="noopener noreferrer" target="_blank">Dr. Arkadev Chattopadhyay</a>.</p>
+<p>I am currently a recipient of the <a href="https://gow.epsrc.ukri.org/NGBOViewGrant.aspx?GrantRef=EP/X03805X/1" rel="noopener noreferrer" target="_blank">UKRI New Investigator Award</a>. During my PhD, my research was supported by the <a href="https://www.tcs.com/who-we-are/newsroom/press-release/research-scholarship-program-computer-science-phds-india" rel="noopener noreferrer" target="_blank">TCS PhD Fellowship</a>.</p>
+</section>
+<section>
+<h3>Highlights &amp; News</h3>
+<ul class="styled-list">
+<li><span class="news-date">Conference</span> Serving as a PC member for <a href="https://algo-conference.org/2026/esa/" rel="noopener noreferrer" target="_blank">ESA 2026</a>, <a href="https://icalppodcspaa2026.cs.rhul.ac.uk/icalp/" rel="noopener noreferrer" target="_blank">ICALP 2026</a>, and <a href="https://ieee-focs.org/" rel="noopener noreferrer" target="_blank">FOCS 2026</a>.</li>
+<li><span class="news-date">Workshop</span> Co-organizing the <a href="https://acm-stoc.org/stoc2026/" rel="noopener noreferrer" target="_blank">STOC 2026</a> workshop <em><a href="https://sagnikm.github.io/workshop-stoc.html" rel="noopener noreferrer" target="_blank">Algorithmic Frontiers of Graph and Hypergraph Problems via Global Queries</a></em> (June 2026) alongside <a href="https://www.cs.dartmouth.edu/~deepc/" rel="noopener noreferrer" target="_blank">Deeparnab Chakrabarty</a>.</li>
+<li><span class="news-date">Publications</span> New papers accepted in <a href="https://www.siam.org/conferences-events/past-event-archive/soda26/" rel="noopener noreferrer" target="_blank">SODA 2026</a> and <a href="https://www.siam.org/conferences-events/past-event-archive/sosa26/" rel="noopener noreferrer" target="_blank">SOSA 2026</a>.</li>
+<li><span class="news-date">Award</span> Postdoc <a href="https://vihanshah72.github.io/" rel="noopener noreferrer" target="_blank">Vihan Shah</a> has won the prestigious <a href="https://marie-sklodowska-curie-actions.ec.europa.eu/actions/postdoctoral-fellowships" rel="noopener noreferrer" target="_blank">Marie Curie Postdoctoral Fellowship</a>.</li>
+<li><span class="news-date">Seminars</span> Along with <a href="https://web.mat.bham.ac.uk/S.A.Lo/" rel="noopener noreferrer" target="_blank">Allan Lo</a>, I co-organize a monthly <a href="https://researchseminars.org/seminar/TCSCombBham" rel="noopener noreferrer" target="_blank">TCS + Combinatorics seminar series</a> at <a href="https://www.birmingham.ac.uk/" rel="noopener noreferrer" target="_blank">Birmingham</a>.</li>
+</ul>
+</section>
+<section>
+<h3>Current Team</h3>
+<div class="team-grid">
+<div class="team-member">
+<strong><a href="https://vihanshah72.github.io/" rel="noopener noreferrer" target="_blank">Vihan Shah</a></strong>
+<span>Postdoctoral Researcher (2025 - Present)</span>
+<span><a href="https://marie-sklodowska-curie-actions.ec.europa.eu/actions/postdoctoral-fellowships" rel="noopener noreferrer" target="_blank">Marie Curie Fellow</a></span>
+</div>
+<div class="team-member">
+<strong><a href="https://www.birmingham.ac.uk/research/centres-institutes/research-in-computer-science/theory-of-computation/theory-of-computation-team" rel="noopener noreferrer" target="_blank">Shravan Mehra</a></strong>
+<span>PhD Student (2024 - Present)</span>
+</div>
+<div class="team-member">
+<strong><a href="https://yonggangjiang.github.io/" rel="noopener noreferrer" target="_blank">Yonggang Jiang</a></strong>
+<span>PhD Student (2022 - Present)</span>
+</div>
+</div>
+</section>
+</main>
+</div>
 </body>
-
 </html>
